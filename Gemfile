@@ -31,7 +31,7 @@ gem 'friendly_id'
 gem 'auto_html'
 
 # Administration
-#gem 'activeadmin'
+gem 'activeadmin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
