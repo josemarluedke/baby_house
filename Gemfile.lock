@@ -70,6 +70,7 @@ GEM
     ffi (1.1.5)
     foreigner (1.2.1)
       activerecord (>= 3.0.0)
+    friendly_id (4.0.8)
     fssm (0.2.9)
     has_scope (0.5.1)
     heroku (2.31.2)
@@ -220,6 +221,7 @@ DEPENDENCIES
   execjs
   ffaker
   foreigner
+  friendly_id
   heroku
   inherited_resources
   jasmine
