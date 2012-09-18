@@ -14,14 +14,8 @@ ActiveAdmin.register Page do
 
   form do |f|
     f.inputs do
-      if f.object.persisted?
-        f.input :title
-        f.input :body
-        f.input :slug
-      else
-        f.input :title
-        f.input :body
-      end
+      f.input :title
+      f.input :body
     end
     f.buttons
   end
