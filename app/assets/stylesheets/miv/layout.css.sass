@@ -7,7 +7,6 @@
 header
   .wrapper
     padding: 10px 0
-    overflow: hidden
     .logo
       float: left
       +grid(3)
@@ -16,12 +15,49 @@ header
   nav
     +grid(9)
     ul
-      +horizontal-list(20px)
+      +horizontal-list(10px)
+      overflow: visible
       float: right
       padding: 40px 0
       text-transform: uppercase
       font-family: 'LeagueGothicRegular', Muli, sans-serif
-      font-size: 1.6em
+      font-size: 1.5em
+      li
+        position: relative
+        a, a:link, a:hover, a:visited, a:focus
+          display: block
+          line-height: 1.2em
+          padding: 10px
+        ul.submenu
+          display: none
+          padding: 0
+          font-size: 0.7em
+          position: absolute
+          right: 10px
+          width: 94%
+          background: #FFF
+          background: rgba(0, 153, 255, 0.2)
+          font-family: 'Muli', sans-serif
+          text-transform: none
+          li
+            float: left
+            margin: 0
+            padding: 0
+            width: 100%
+            white-space: normal
+            a, a:link, a:hover, a:visited, a:focus
+              background: transparent
+              border-top: 1px solid #FFF
+              padding: 10px
+              &:hover
+                background: #FFF
+                background: rgba(255, 255, 255, 0.5)
+
+        &:hover
+          a, a:link
+            background: #FFF
+          ul.submenu
+            display: block
 
 section#banner
   background:
@@ -64,3 +100,13 @@ footer
           font-size: 1.4em
       .street
         margin-top: 10px
+
+.arrow
+  border-color: #FFF transparent transparent transparent
+  border-style: solid
+  border-width: 5px
+  height: 0
+  width: 0
+  position: absolute
+  top: 0
+  left: 45%
