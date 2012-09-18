@@ -1,0 +1,195 @@
+body
+  background: 
+    color: #EEEDE9
+  +background-image(linear-gradient(#EEF8FF, $blue1))
+  color: #333
+  font-family: "Muli", Helvetica, Arial, sans-serif
+  font-size: 100%
+  font-weight: lighter
+  -webkit-font-smoothing: antialiased
+
+article, aside
+  overflow: hidden
+  clear: both
+
+p
+  font-size: 1.1em
+  line-height: 1.5em
+  margin-bottom: 10px
+
+blockquote
+  +grid(4)
+  +text-shadow(0 1px 0 #FFF)
+  color: #555
+  font-size: 1.5em
+  line-height: 1.4em
+  padding: 10px 20px
+  &:before, &:after
+    +text-shadow(none)
+    color: #FFF
+    color: rgba(255, 255, 255, 0.8)
+    font-family: 'LeagueGothicRegular', Muli, sans-serif
+    content: "\201C"
+    font-size: 6em
+    line-height: 10px
+    margin: 45px 10px
+    padding: 0
+    float: left
+  &:after
+    float: right
+    content: "\201D"
+    margin: 45px -41px 0 0
+
+
+address
+  line-height: 20px
+  margin-top: 10px 
+
+strong, b
+  font-weight: bold
+
+h1, h2, h3, h4
+  font-weight: normal
+  font-family: 'LeagueGothicRegular', Muli, sans-serif
+  margin: 10px 0
+  text-transform: uppercase
+
+
+h2
+  font-size: 1.495em
+  line-height: 2em
+
+h3
+  font-size: 1.7em
+  line-height: 1.0em
+  span
+    font-size: 1.12em
+    display: block
+
+h4
+  font-size: 1em
+
+
+input[type="text"]
+  float: left
+  font-size: 1.4em
+  border: none
+  padding: 7px 15px
+  width: 305px
+  background: #F1F1F1
+  +border-radius(3px)
+  &:focus
+    outline: none
+    border-color: #AAA
+
+a, a:link, a:hover, a:visited, a:focus
+  text-decoration: none
+  line-height: 16px
+a, a:link
+  color: $blue2
+  &:hover
+    color: $blue1
+
+ul
+  margin-bottom: 20px
+  float: left
+
+.wrapper
+  +grid-container
+
+nav
+  ul
+
+
+section
+  clear: both
+  overflow: hidden
+
+hr
+  border: none
+  margin: 20px 0
+  height: 25px
+  &.hr1
+    background:
+      image: url(asset_path("dividers.png", "image"))
+      repeat: no-repeat
+      position: 0 0
+  &.hr2
+    background:
+      image: url(asset_path("dividers.png", "image"))
+      repeat: no-repeat
+      position: center -73px
+
+
+.button
+  &.view_more
+    +btn($yellow1)
+    margin-left: 35%
+  &.submit
+    +btn($yellow1)
+    +border-radius(2px)
+    font-size: 1em
+.clear
+  clear: both
+
+.msg
+  clear: both
+  margin-top: 10px
+
+
+.tooltip
+  background:
+    color: #333
+    color: rgba(0, 0, 0, 0.9)
+  margin: 10px auto
+  color: #FFF
+  padding: 10px
+  position: relative
+  text-align: center
+  width: 100px
+  font-style: italic
+  letter-spacing: 1px
+
+.arrow
+  border-color: transparent rgba(0, 0, 0, 0.9) transparent transparent
+  border-style: solid
+  border-width: 5px
+  height: 0
+  width: 0
+  position: absolute
+  left: -10px
+  top: 13px
+  &.right
+    border-color: transparent transparent  transparent  #999
+    right: -35px
+    left: auto
+    top: 0
+    &.huge
+      border-width: 18px
+
+.tip.link
+  cursor: help
+  border-bottom: dotted 1px
+  float: left
+
+.tip
+  position: relative
+
+.tip span    
+  display: none
+  text-transform: normal 
+  font-size: 13px !important
+  line-height: 15px !important
+  font-weight: normal !important
+  background: #111
+  color: #FFF
+  padding: 10px 15px
+  white-space: nowrap
+  z-index: 1000
+  left: 0px
+  margin: 10px
+  position: absolute
+  top: 20px
+
+.tip:hover span
+  display: block

@@ -1,0 +1,60 @@
+header
+  .wrapper
+    padding: 10px 0
+    overflow: hidden
+    .logo
+      float: left
+      +grid(3)
+      img
+        width: 100%
+  nav
+    +grid(9)
+    ul
+      +horizontal-list(20px)
+      float: right
+      padding: 40px 0
+      text-transform: uppercase
+      font-family: 'LeagueGothicRegular', Muli, sans-serif
+      font-size: 1.6em
+
+section#banner
+  background:
+    image: url(asset_path("banner-bg.png", "image"))
+    repeat: no-repeat
+    position: 0 0
+  padding: 180px
+  margin-top: -40px
+
+section#info
+  article
+    +grid(7)
+    +alpha
+
+footer
+  background: #3D3D3D
+  color: #F1F1F1
+  border-top: 4px solid #4F4F4F
+  margin-top: 80px
+  a, a:link
+    color: #FFF
+    text-decoration: underline
+    &:hover
+      color: #FFF
+  .wrapper
+    padding: 40px 0
+    overflow: hidden
+    .brand, .social, .contact
+      +grid(4)
+      font-size: 1em
+      line-height: 1.4em
+      p
+        margin: 0
+    .social
+      text-align: center
+    .contact
+      text-align: right
+      .phone
+        span
+          font-size: 1.4em
+      .street
+        margin-top: 10px

@@ -1,0 +1,30 @@
+@mixin right
+  float: right
+
+@mixin left
+  float: left
+
+@mixin btn($color: #333, $align: left, $size: 1.2em)
+  border: 0
+  padding: 10px 15px
+  float: $align
+  font-size: $size
+  text-transform: uppercase
+  text-align: center
+  color: white
+  +border-radius(5px)
+  +transition(opacity 0.2s linear)
+  display: block
+  background: 
+    color: $color
+  text-decoration: none
+  cursor: pointer
+  +background-image(none)
+  &:hover
+    color: white
+    background: 
+      color: darken($color, 50%)
+  &:focus
+    outline: none
+
+
