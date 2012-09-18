@@ -1,0 +1,50 @@
+#contact
+  h2 Entre em contato conosco!
+  .tip
+    p Quer entrar em contato com a Baby House? Especifique o assunto e preencha corretamente o formulário abaixo. Retornaremos o contato o mais breve possível!
+  
+  form[method="post" class="contato_form"]
+    .subject
+      h3 Eu quero...
+      ul
+        li
+          input[type="radio" name="subject" value="mais informações" id="info"] 
+          label[for="info"] Saber mais informações
+        li
+          input[type="radio" name="subject" value="trabalhar na Baby House" id="work"] 
+          label[for="work"] Trabalhar na Baby House
+        li
+          input[type="radio" name="subject" value="visitar Baby House" id="visit"] 
+          label[for="visit"] Visitar a Baby House
+        li
+          input[type="radio" name="subject" value="fazer matrícula" id="register"] 
+          label[for="register"] Fazer matrícula
+      
+      ul
+        li
+          input[type="radio" name="subject" value="oferecer produtos e serviços" id="services"] 
+          label[for="services"] Oferecer produtos e serviços
+        li
+          input[type="radio" name="subject" value="solicitar palestra ou curso" id="courses"] 
+          label[for="courses"] Solicitar palestra ou curso
+        li
+          input[type="radio" name="subject" value="dar opinião/sugestão" id="opinion"]
+          label[for="opinion"] Dar minha opinião e/ou sugestão
+        li
+          input[type="radio" name="subject" value="outros contatos" id="others"]
+          label[for="others"] Outros contatos
+
+    .your_data
+      ul
+        li
+          label[for="name"] Nome
+          input[type="text" id="name"]
+        li
+          label[for="email"] Email
+          input[type="text" id="email"]
+        li
+          label[for="phone"] Telefone
+          input[type="text" id="phone"]
+    .your_message
+      label[for="message"] Mensagem
+      textarea[id="message"]

@@ -5,20 +5,26 @@
 
 
 header
+  height: 130px
   .wrapper
     padding: 10px 0
+    position: relative
     .logo
-      float: left
       +grid(3)
+      position: absolute
+      top: 28px
+      left: 20px
       img
         width: 100%
   nav
     +grid(9)
+    +omega
+    float: right
     ul
       +horizontal-list(10px)
       overflow: visible
       float: right
-      padding: 40px 0
+      padding: 20px 0
       text-transform: uppercase
       font-family: 'LeagueGothicRegular', Muli, sans-serif
       font-size: 1.5em
