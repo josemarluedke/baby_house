@@ -2,6 +2,7 @@ pt-BR:
   mail_form:
     attributes:
       contact_form:
+        subject: "Eu quero"
         name: "Nome"
         email: "E-mail"
         phone: "Telefone"
