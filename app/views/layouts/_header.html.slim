@@ -7,15 +7,22 @@
         = link_to("Sobre a Baby House", "#", :class => "menu1")
         ul.submenu
           .arrow
-          li 
-            a[href="#"] item 1
-          li 
-            a[href="#"] item 1
-          li 
-            a[href="#"] item 1
+          - for page in @about_pages
+            li= link_to page.title, page_path(page)
       li
         = link_to("Pedagogia para a Vida", "#", :class => "menu1")
+        - if @pedagogy_pages
+          ul.submenu
+            .arrow
+            - for page in @pedagogy_pages
+              li= link_to page.title, page_path(page)
       li
         = link_to("Portal das famílias", "#", :class => "menu1")
+        - if @portal_pages
+          ul.submenu
+            .arrow
+            - for page in @portal_pages
+              li= link_to page.title, page_path(page)
+
       li
         = link_to("Contato", "#", :class => "menu1")
