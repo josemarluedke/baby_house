@@ -1,12 +1,12 @@
 ActiveAdmin.register Page do
   filter :title
-  filter :body
+  filter :category
   filter :created_at
-  filter :updated_at
 
   index do
     column :title
     column :slug
+    column :category
     column :created_at
     column :updated_at
     default_actions
@@ -16,6 +16,7 @@ ActiveAdmin.register Page do
     f.inputs do
       f.input :title
       f.input :body
+      f.input :category
     end
     f.buttons
   end

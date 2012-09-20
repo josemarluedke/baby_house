@@ -27,4 +27,7 @@ describe Page do
       page.body_html.should == "<p>A <em>simple</em> body of <em>page</em> <a href=\"http://link.me\" target=\"_blank\">http://link.me</a></p>\n"
     end
   end
+  describe "Associations" do
+    it { should belong_to :category }
+  end
 end
