@@ -13,7 +13,6 @@ class Page < ActiveRecord::Base
     youtube
     vimeo
     redcarpet
-    link target: "_blank"
   end
 
   def should_generate_new_friendly_id?
