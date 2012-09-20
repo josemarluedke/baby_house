@@ -24,11 +24,13 @@ gem 'heroku'
 gem 'jquery-rails'
 gem "slim"
 gem "slim-rails"
+gem 'sendgrid'
 
 # Tools
 gem 'simple_form'
 gem 'friendly_id'
 gem 'auto_html'
+gem 'mail_form'
 
 # Administration
 gem 'activeadmin'
