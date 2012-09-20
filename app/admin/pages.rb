@@ -20,4 +20,10 @@ ActiveAdmin.register Page do
     end
     f.buttons
   end
+
+  sidebar :tip, :only => [:edit, :new] do
+    "If you want format the body of the page, you may use Markdown.
+    <br /><br />
+    Read more <a href=\"http://daringfireball.net/projects/markdown/syntax\" target=\"_blank\">here</a>".html_safe
+  end
 end
