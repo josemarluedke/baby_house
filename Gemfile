@@ -37,6 +37,11 @@ gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
 # Administration
 gem 'activeadmin'
 
+# Images
+gem 'carrierwave'
+gem 'carrierwave-postgresql'
+gem 'postgresql_lo_streamer'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'

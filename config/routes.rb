@@ -9,6 +9,9 @@ BabyHouse::Application.routes.draw do
 
   get '/contato', :to => "contact#new", :as => "contato"
 
+  # Retrieve images from database
+  mount PostgresqlLoStreamer::Engine => "/image_image"
+
   # Pages (have to be in the end of file)
   get '/:id', to: 'pages#show', as: :page
 end
