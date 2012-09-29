@@ -11,6 +11,7 @@ BabyHouse::Application.routes.draw do
 
   # Retrieve images from database
   mount PostgresqlLoStreamer::Engine => "/image_image"
+  mount PostgresqlLoStreamer::Engine => "/banner_image"
 
   # Pages (have to be in the end of file)
   get '/:id', to: 'pages#show', as: :page
