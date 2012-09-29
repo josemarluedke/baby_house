@@ -31,6 +31,8 @@ gem 'simple_form'
 gem 'friendly_id'
 gem 'auto_html'
 gem 'mail_form'
+gem 'tinymce-rails'
+gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
 
 # Administration
 gem 'activeadmin'

@@ -15,7 +15,7 @@ ActiveAdmin.register Page do
   form do |f|
     f.inputs do
       f.input :title
-      f.input :body
+      f.input :body, :input_html => { :class => 'mceEditor' }
       f.input :category
     end
     f.buttons
