@@ -31,22 +31,31 @@ header
       +horizontal-list(10px)
       overflow: visible
       float: right
-      padding: 20px 0
-      font-family: 'LeagueGothicRegular', Muli, sans-serif
-      font-size: 1.5em
+      padding: 40px 0
+
       li
         position: relative
+        white-space: normal
+        width: 125px
+        border-left: 1px solid #FFF
+        padding: 0 20px
+        text-align: center
+        +box-shadow(-1px 0 0 #F1F1F1)
+        &:first-child
+          border: 0
+          +box-shadow(none)
         a, a:link, a:visited, a:focus
           display: block
-          line-height: 1.2em
           padding: 5px 10px
+          font-family: 'Muli', sans-serif
+          font-size: 1.3em
+          line-height: 1.4em
         ul.submenu
           display: none
           padding: 0
           font-size: 0.7em
           position: absolute
-          right: 10px
-          width: 93.5%
+          width: 86.5%
           background: #FFF
           background: rgba(0, 153, 255, 0.2)
           font-family: 'Muli', sans-serif
@@ -57,6 +66,9 @@ header
             padding: 0
             width: 100%
             white-space: normal
+            border: 0
+            +box-shadow(none)
+            text-align: left
             a, a:link, a:hover, a:visited, a:focus
               background: transparent
               border-top: 1px solid #FFF
@@ -89,9 +101,9 @@ section#banner
     margin-left: 0
     li a
       display: block
-      padding: 30px 45px 30px 20px
+      padding: 30px 33px
       line-height: 1.1em
-      font-size: 1.4em
+      font-size: 1.7em
       font-family: 'LeagueGothicRegular', Muli, sans-serif
       +background-image(linear-gradient(#FFF, #F1F1F1))
       span
