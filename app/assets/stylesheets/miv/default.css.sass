@@ -2,7 +2,6 @@ body
   background: 
     color: #FFF
   +background-image(linear-gradient($blue3, $blue1))
-  color: #F0F0F0
   font-family: "Muli", Helvetica, Arial, sans-serif
   font-size: 100%
   font-weight: lighter
@@ -13,7 +12,7 @@ article, aside
   clear: both
 
 p
-  font-size: 1.1em
+  font-size: 1em
   line-height: 1.5em
   margin-bottom: 10px
 
@@ -26,8 +25,7 @@ blockquote
   padding: 10px 20px
   &:before, &:after
     +text-shadow(none)
-    color: #FFF
-    color: rgba(255, 255, 255, 0.8)
+    color: #DDD
     font-family: 'LeagueGothicRegular', Muli, sans-serif
     content: "\201C"
     font-size: 6em
@@ -49,19 +47,17 @@ strong, b
   font-weight: bold
 
 h1, h2, h3, h4
-  font-weight: normal
-  font-family: 'LeagueGothicRegular', Muli, sans-serif
+  font-weight: 400
+  font-family: 'Muli', sans-serif
   margin: 10px 0
-  text-transform: uppercase
 
+
+h1
+  font-size: 1.8em
+  line-height: 1.5em
 
 h2
-  font-size: 2em
-  line-height: 1.5em
-  margin-top: 40px
-
-h3
-  font-size: 1.7em
+  font-size: 1.4em
   line-height: 1.0em
   span
     font-size: 1.12em
@@ -71,17 +67,18 @@ h4
   font-size: 1em
 
 
-input[type="text"]
-  float: left
-  font-size: 1.4em
-  border: none
-  padding: 7px 15px
-  width: 305px
-  background: #F1F1F1
-  +border-radius(3px)
-  &:focus
-    outline: none
-    border-color: #AAA
+input, textarea
+  &[type=text], &[type=password], &[type=url], &[type=email], &[type=tel], &.text, &.title
+    float: left
+    font-size: 1em
+    border: none
+    padding: 7px 15px
+    width: 305px
+    background: #F1F1F1
+    +border-radius(3px)
+    &:focus
+      outline: none
+      border-color: #AAA
 
 a, a:link, a:hover, a:visited, a:focus
   text-decoration: none
@@ -175,6 +172,7 @@ hr
 
 .tip
   position: relative
+  color: #555
 
 .tip span    
   display: none

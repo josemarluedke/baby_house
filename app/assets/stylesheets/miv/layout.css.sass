@@ -1,12 +1,18 @@
 .container
   background:
-    //image: url(asset_path("bg.png", "image"))
-    repeat: repeat
-
+    image: url(asset_path("container-bg.png", "image"))
+    repeat: repeat-y
+    position: center
+  .content
+    background: #FFF
+    padding: 10px
 
 header
-  height: 150px
-  background: #F9F9F9
+  height: 163px
+  background:
+    image: url(asset_path("top-bg.png", "image"))
+    repeat: repeat-x
+    position: center
   .wrapper
     padding: 10px 0
     position: relative
@@ -70,7 +76,7 @@ section#banner
     image: url(asset_path("banner-bg.png", "image"))
     repeat: no-repeat
     position: 0 0
-  margin-top: -32px
+  margin-top: -34px
   padding-top: 40px
   .image
     float: left
@@ -101,6 +107,16 @@ section#info
   article
     +grid(7)
     +alpha
+
+
+section#buckets
+  ul
+    li
+      +grid(4)
+      &:first-child
+        +alpha
+      &:last-child
+        +omega
 
 footer
   background: #3D3D3D
@@ -140,3 +156,22 @@ footer
   position: absolute
   top: 0
   left: 45%
+
+
+.button 
+  cursor: pointer
+  display: block
+  padding: 5px 10px
+  border: 1px solid #999
+  border: 1px solid rgba(0, 0, 0, 0.2)
+  float: left
+  font-size: 12px
+  text-align: center
+  color: white !important
+  background: #333
+  +border-radius(5px)
+  +transition(opacity 0.2s linear)
+  +box-shadow(0 1px rgba(255, 255, 255, 0.4) inset, 0 1px #fff)
+  +text-shadow(0 -1px rgba(0, 0, 0, 0.2))
+  &:hover
+    background: #222

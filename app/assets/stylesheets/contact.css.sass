@@ -3,19 +3,45 @@
   form
 
     .subject
-      +grid(6)
+      +grid(4)
       +alpha
       +omega
+      +grid-prefix(1)
       ul
-        +grid(3)
-        +alpha
+        +border-radius(5px)
+        width: 100%
+        padding: 10px
+        background: #F0F0F0
+        margin-bottom: 0
         li
-          margin: 10px 0
+          margin: 15px 0
           input
             float: left
+          label
+            cursor: pointer
+
+    .right
+      +grid(6)
+      +grid-prefix(1)
+      +omega
+      +alpha
+      overflow: hidden
+      float: left
     .your_data
       li
         float: left
+        margin-top: 10px
         label
-          float: left
+          display: block
+          width: 65px
+    .your_message
+      overflow: hidden
+      clear: both
+      label
+        display: block
+    .submit
+      float: right
+      margin-right: 122px
+      margin-top: 10px
+
 
