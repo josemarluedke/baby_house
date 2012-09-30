@@ -70,8 +70,32 @@ section#banner
     image: url(asset_path("banner-bg.png", "image"))
     repeat: no-repeat
     position: 0 0
-  padding: 180px
   margin-top: -32px
+  padding-top: 40px
+  .image
+    float: left
+    padding-left: 10px
+    margin-top: -28px
+  ul
+    float: right
+    margin: 10px
+    margin-top: -25px
+    margin-left: 0
+    li a
+      display: block
+      padding: 20px 45px 20px 20px
+      line-height: 1.1em
+      font-size: 1.4em
+      font-family: 'LeagueGothicRegular', Muli, sans-serif
+      +background-image(linear-gradient(#FFF, #F1F1F1))
+      span
+        color: #555
+        font-size: 0.8em
+    li a.first
+      padding-top: 30px
+      background:
+        image: url(asset_path("icon-bg.png", "image"))
+        repeat: no-repeat
 
 section#info
   article
