@@ -1,7 +1,8 @@
 body
   background: 
-    color: #FFF
-  +background-image(linear-gradient($blue3, $blue1))
+    color: $blue1
+    image: url(asset_path("bg.png", "image"))
+    repeat: repeat-x
   font-family: "Tahoma", Helvetica, Arial, sans-serif
   font-size: 13px
   -webkit-font-smoothing: antialiased
@@ -49,6 +50,7 @@ h1, h2, h3, h4
   font-weight: 400
   font-family: 'Muli', sans-serif
   margin: 10px 0
+  color: $blue2
 
 
 h1
