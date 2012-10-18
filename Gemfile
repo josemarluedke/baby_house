@@ -39,6 +39,7 @@ gem 'activeadmin'
 
 # Images
 gem 'carrierwave'
+gem 'rmagick'
 gem 'carrierwave-postgresql'
 gem 'postgresql_lo_streamer'
 

@@ -3,7 +3,7 @@
 class BannerUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
-  # include CarrierWave::RMagick
+  include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
   # Include the Sprockets helpers for Rails 3.1+ asset pipeline compatibility:
@@ -16,6 +16,7 @@ class BannerUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
+  process :resize_to_fill => [739, 330]
 
   def extension_white_list
     %w(jpg jpeg gif png)
