@@ -8,7 +8,7 @@ class ContactForm < MailForm::Base
   def headers
     {
       :subject => "Contato pelo site Baby House",
-      :to => "josemarluedke@gmail.com"
+      :to => "gustavo@tridara.net"
     }
   end
 end
