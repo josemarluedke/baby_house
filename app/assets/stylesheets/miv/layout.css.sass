@@ -4,6 +4,7 @@
     repeat: repeat-y
     position: center
   .content
+    +clearfix
     background: #FFF
     padding: 10px
     margin-top: 30px
@@ -17,7 +18,7 @@ header
       image: url(asset_path("header-bg.png", "image"))
       repeat: no-repeat
       position: -16px -19px
-    height: 204px
+    height: 180px
     .logo
       +grid(3)
       position: absolute
@@ -169,7 +170,7 @@ footer
   left: 45%
 
 
-.button 
+.button
   cursor: pointer
   display: block
   padding: 5px 10px
