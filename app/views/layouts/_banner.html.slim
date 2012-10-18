@@ -1,22 +1,24 @@
 section#banner
+  - banner = Banner.latest
   .image
     .resize
-      = image_tag "image2.png", :alt => "Baby House - Escola Infantil"
+      = link_to banner.link_url do
+        = image_tag banner.image.url, :alt => banner.title
   ul
     li
-      a.first[href="#"]
+      a.first[href=page_path(@about_pages.first)]
         | Berçário e Minimaternal 
         br
         span
           | (0 a 2 anos)
     li
-      a[href="#"]
+      a[href=page_path(@about_pages.first)]
         | Maternal 
         br
         span
           | (2 a 4 anos)
     li
-      a[href="#"]
+      a[href=page_path(@about_pages.first)]
         | Jardim 
         br
         span
