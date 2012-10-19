@@ -39,26 +39,31 @@ header
       li
         position: relative
         white-space: normal
-        width: 125px
+        width: 145px
         border-left: 1px solid #FFF
         text-align: center
         +box-shadow(-1px 0 0 #F1F1F1)
         &:first-child
           border: 0
           +box-shadow(none)
+          ul.submenu
+            left: 0
+            width: 93.5%
         a, a:link, a:visited, a:focus
           display: block
           padding: 5px 10px
           font-family: 'Muli', sans-serif
           font-size: 1.3em
+          font-weight: bold
           line-height: 1.4em
         ul.submenu
           display: none
           padding: 0
           font-size: 0.7em
           position: absolute
+          left: 10px
           right: 10px
-          width: 93.5%
+          width: 88%
           background: #FFF
           background: rgba(0, 153, 255, 0.2)
           font-family: 'Muli', sans-serif
@@ -76,6 +81,7 @@ header
               background: transparent
               border-top: 1px solid #FFF
               padding: 10px
+              font-weight: normal
               &:hover
                 background: #FFF
                 background: rgba(255, 255, 255, 0.5)
@@ -90,7 +96,7 @@ section#banner
   background: white
   border: 10px solid $blue1
   margin-top: -55px
-  padding-top: 40px
+  padding-top: 35px
   .image
     float: left
     margin-top: -25px
