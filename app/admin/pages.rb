@@ -22,8 +22,6 @@ ActiveAdmin.register Page do
   end
 
   sidebar :tip, :only => [:edit, :new] do
-    "If you want format the body of the page, you may use Markdown.
-    <br /><br />
-    Read more <a href=\"http://daringfireball.net/projects/markdown/syntax\" target=\"_blank\">here</a>".html_safe
+    "Use full url image. E.g. http://example.com/image/23566.jpg".html_safe
   end
 end
