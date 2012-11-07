@@ -9,7 +9,7 @@ pt-BR:
     - Sex
     - Sáb
     abbr_month_names:
-    - 
+    -
     - Jan
     - Fev
     - Mar
@@ -32,10 +32,10 @@ pt-BR:
     - Sábado
     formats:
       default: ! '%d/%m/%Y'
-      long: ! '%d de %B de %Y'
+      long: ! "%d/%m/%Y"
       short: ! '%d de %B'
     month_names:
-    - 
+    -
     - Janeiro
     - Fevereiro
     - Março
