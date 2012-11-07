@@ -1,5 +1,5 @@
 BabyHouse::Application.routes.draw do
-  devise_for :parents, ActiveAdmin::Devise.config
+  devise_for :parents
 
   ActiveAdmin.routes(self)
 
