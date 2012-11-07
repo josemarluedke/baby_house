@@ -1,4 +1,8 @@
 pt-BR:
+  site:
+    host: "escolababyhouse.com.br"
+    emails:
+      system: "system@escolababyhouse.com.br"
   mail_form:
     attributes:
       contact_form:

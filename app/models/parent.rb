@@ -4,4 +4,5 @@ class Parent < ActiveRecord::Base
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :relationship
+  validates :name, presence: true
 end
