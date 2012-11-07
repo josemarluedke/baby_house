@@ -12,3 +12,12 @@ Banner.blueprint do
   link_url { "http://example.com" }
   image { File.open("#{Rails.root}/spec/fixtures/images/image.jpg") }
 end
+
+Parent.blueprint do
+  name {'Josemar Davi Luedke'}
+  email {"josemarluedke#{sn}@gmail.com"}
+  password {'josemar'}
+  password_confirmation {'josemar'}
+  confirmed_at { Date.today }
+end
+
