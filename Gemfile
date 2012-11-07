@@ -36,6 +36,7 @@ gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
 
 # Administration
 gem 'activeadmin'
+gem 'rails_admin'
 
 # Images
 gem 'carrierwave'

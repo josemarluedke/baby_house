@@ -1,4 +1,8 @@
 BabyHouse::Application.routes.draw do
+  devise_for :admin_users
+
+  mount RailsAdmin::Engine => '/rails_admin', :as => 'rails_admin'
+
   devise_for :parents
 
   ActiveAdmin.routes(self)

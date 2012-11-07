@@ -62,12 +62,17 @@ describe Parent do
     end
   end
 
-  describe "validations" do
+  describe "Validations" do
     subject { @parent }
 
     it{ should validate_presence_of :name }
     it{ should validate_presence_of :email }
     it{ should validate_presence_of :password }
+  end
+
+  describe "Associations" do
+    it { should have_many :parent_students }
+    it { should have_many :students }
   end
 
 end
