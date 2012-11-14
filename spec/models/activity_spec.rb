@@ -8,5 +8,6 @@ describe Activity do
   describe "Associations" do
     it { should have_many :team_activities }
     it { should have_many :teams }
+    it { should have_many :activity_images }
   end
 end
