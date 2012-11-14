@@ -11,7 +11,7 @@ gem 'inherited_resources'
 #gem 'has_scope'
 
 # Authentication
-#gem "devise", "~> 2.1.2"
+gem "devise", "~> 2.1.2"
 #gem "omniauth", "~> 1.1.0"
 #gem "omniauth-facebook", "~> 1.2.0"
 #gem "omniauth-twitter", "~> 0.0.12"
@@ -35,7 +35,6 @@ gem 'tinymce-rails'
 gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
 
 # Administration
-gem 'activeadmin'
 gem 'rails_admin'
 
 # Images
