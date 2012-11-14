@@ -52,9 +52,8 @@ $(function () {
   });
 });
 
-
-jQuery(function() {
-   jQuery('textarea').tinymce({
+$(document).live('rails_admin.dom_ready', function(){
+  $('textarea').tinymce({
      theme: 'advanced'
    });
 });
