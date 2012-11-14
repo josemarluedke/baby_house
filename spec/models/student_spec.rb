@@ -7,6 +7,8 @@ describe Student do
 
   describe "Associations" do
     it { should have_many :parents }
-    it { should have_many :parent_students }
+    it { should have_many :parentages }
+    it { should have_many :teams }
+    it { should have_many :attendances }
   end
 end

@@ -6,4 +6,9 @@ describe Team do
     it { should validate_presence_of :name }
     it { should validate_presence_of :shift }
   end
+
+  describe "Associations" do
+    it { should have_many :attendances }
+    it { should have_many :students }
+  end
 end

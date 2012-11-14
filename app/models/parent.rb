@@ -1,6 +1,6 @@
 class Parent < ActiveRecord::Base
-  has_many :parent_students
-  has_many :students, through: :parent_students
+  has_many :parentages
+  has_many :students, through: :parentages
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :lockable, :timeoutable, :registerable and :omniauthable

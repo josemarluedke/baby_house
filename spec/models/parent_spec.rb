@@ -71,7 +71,7 @@ describe Parent do
   end
 
   describe "Associations" do
-    it { should have_many :parent_students }
+    it { should have_many :parentages }
     it { should have_many :students }
   end
 
