@@ -1,0 +1,60 @@
+<%
+  theme = ENV['RAILS_ADMIN_THEME'] || :default
+  require_asset 'jquery'
+  require_asset 'jquery_ujs'
+  require_asset 'jquery.remotipart'
+  require_asset 'jquery.effects.core'
+  require_asset 'jquery.ui.sortable'
+  require_asset 'jquery.ui.autocomplete'
+  require_asset 'jquery.ui.datepicker'
+  require_asset 'rails_admin/jquery.ui.timepicker'
+  require_asset 'rails_admin/ra.datetimepicker'
+  require_asset 'rails_admin/jquery.colorpicker'
+  require_asset 'rails_admin/ra.filter-box'
+  require_asset 'rails_admin/ra.filtering-multiselect'
+  require_asset 'rails_admin/ra.filtering-select'
+  require_asset 'rails_admin/ra.remote-form'
+  require_asset 'rails_admin/jquery.pjax'
+  require_asset 'jquery_nested_form'
+  require_asset 'rails_admin/ra.nested-form-hooks'
+  require_asset 'bootstrap'
+  require_asset 'rails_admin/ra.widgets'
+  require_asset 'rails_admin/ui'
+  require_asset "rails_admin/themes/#{theme}/ui"
+  require_asset 'rails_admin/custom/ui'
+  require_asset 'tinymce-jquery'
+%>
+
+// WYSIWYG Editor
+$(function () {
+  tinymce.init({
+    mode : "textareas",
+    theme : "advanced",
+    plugins : "autolink,lists,style,table,advimage,advlink,iespell,inlinepopups,contextmenu,paste",
+    editor_selector: 'mceEditor',
+
+    // Theme options
+    theme_advanced_buttons1 : "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,|,formatselect,fontselect,fontsizeselect,|,bullist,numlist,outdent,indent,|,link,unlink,image,|,table,pasteword,code",
+    theme_advanced_toolbar_location : "top",
+    theme_advanced_toolbar_align : "left",
+    theme_advanced_statusbar_location : "bottom",
+    theme_advanced_resizing : true,
+
+    // Skin options
+    skin : "o2k7",
+    skin_variant : "silver",
+
+    // Drop lists for link/image/media/template dialogs
+    template_external_list_url : "js/template_list.js",
+    external_link_list_url : "js/link_list.js",
+    external_image_list_url : "js/image_list.js",
+    media_external_list_url : "js/media_list.js",
+  });
+});
+
+
+jQuery(function() {
+   jQuery('textarea').tinymce({
+     theme: 'advanced'
+   });
+});
