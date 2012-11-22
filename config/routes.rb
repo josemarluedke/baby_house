@@ -13,6 +13,7 @@ BabyHouse::Application.routes.draw do
 
   # Retrieve images from database
   mount PostgresqlLoStreamer::Engine => "/image_image"
+  mount PostgresqlLoStreamer::Engine => "/activity_cover"
   mount PostgresqlLoStreamer::Engine => "/banner_image"
   mount PostgresqlLoStreamer::Engine => "/activityimage_image"
 

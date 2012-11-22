@@ -11,3 +11,19 @@
       width: 100px
       padding: 10px
 
+.activity-list
+  +clearfix
+  .activity-box
+    width: 165px
+    margin: 10px
+    float: left
+    &:nth-child(5n+1)
+      clear: both
+
+    .name
+      font-weight: bold
+      font-size: 120%
+    .description
+      margin-top: 20px
+    .date
+      margin-top: 10px

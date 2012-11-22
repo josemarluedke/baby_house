@@ -2,7 +2,7 @@ h1.title
   = "Atividade: #{@activity.name}"
 
 .activity
-  .date = l @activity.date
+  .date = l(@activity.date) if @activity.date.present?
   .description = @activity.description.html_safe
 
   .photos
@@ -13,7 +13,7 @@ h1.title
     - for image in @activity.activity_images
       .image
         = link_to "#{image.image.url}.jpg", rel: "prettyPhoto[pp_gal]", title: "" do
-          - image_tag image.image.url, size: "100x75", alt: ""
+          - image_tag "#{image.image.url}.jpg", size: "100x75", alt: ""
 
   p.back
     = link_to "Voltar para a lista de atividades", activities_path
