@@ -17,10 +17,11 @@
             - for page in @pedagogy_pages
               li= link_to page.title, page_path(page)
       li
-        = link_to("Portal das famílias", "#{parent_signed_in? ? '#' : new_parent_session_path}", :class => "menu1")
+        = link_to("Portal das famílias", "#{parent_signed_in? ? activities_path : new_parent_session_path}", :class => "menu1")
         ul.submenu
           .arrow
           - if parent_signed_in?
+            li = link_to "Atividades", activities_path
             li = link_to "Sair", destroy_parent_session_path, method: :delete
           - else
             li = link_to "Fazer login", new_parent_session_path

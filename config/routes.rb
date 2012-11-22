@@ -4,6 +4,7 @@ BabyHouse::Application.routes.draw do
 
   devise_for :parents
 
+  resources :activities, only: [:index, :show]
   resources :pages, only: [:index, :show]
   resources :contact, only: [:new, :create]
   root :to => "pages#index"

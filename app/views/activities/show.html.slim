@@ -1,0 +1,13 @@
+h1.title
+  = "Atividade: #{@activity.name}"
+
+.activity
+  .description = @activity.description.html_safe
+
+  h2 Fotos
+  - for image in @activity.activity_images
+    = image_tag image.image.url, size: "100x100"
+
+
+p
+  = link_to "Voltar para a lista de atividades", activities_path
