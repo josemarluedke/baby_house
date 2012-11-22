@@ -1,5 +1,5 @@
 body
-  background: 
+  background:
     color: $blue1
     image: url(asset_path("bg.png", "image"))
     repeat: repeat-x
@@ -41,7 +41,7 @@ blockquote
 
 address
   line-height: 20px
-  margin-top: 10px 
+  margin-top: 10px
 
 strong, b
   font-weight: bold
@@ -79,6 +79,10 @@ input, textarea
     &:focus
       outline: none
       border-color: #AAA
+
+.form-inputs
+  input
+    float: none
 
 a, a:link, a:hover, a:visited, a:focus
   text-decoration: none
@@ -174,9 +178,9 @@ hr
   position: relative
   color: #555
 
-.tip span    
+.tip span
   display: none
-  text-transform: normal 
+  text-transform: normal
   font-size: 13px !important
   line-height: 15px !important
   font-weight: normal !important
@@ -192,3 +196,23 @@ hr
 
 .tip:hover span
   display: block
+
+.flash
+  font-size: 1.6em
+  color: white
+  display: none
+  z-index: 500
+  position: fixed
+  bottom: 0
+  width: 100%
+  text-align: center
+  .wrapper-flash
+    padding: 20px
+  .success.wrapper-flash, .notice.wrapper-flash
+    background-color: #59aF6d
+  .failure.wrapper-flash, .error.wrapper-flash, .alert.wrapper-flash
+    background-color: #cc1529
+    color: white
+    margin: 0px
+    border: 0px
+    +border-radius(0px)
