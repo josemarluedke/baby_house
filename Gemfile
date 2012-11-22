@@ -24,7 +24,7 @@ gem 'heroku'
 gem 'jquery-rails'
 gem "slim"
 gem "slim-rails"
-gem 'sendgrid'
+gem 'prettyphoto-rails'
 
 # Tools
 gem 'simple_form'
@@ -33,6 +33,7 @@ gem 'auto_html'
 gem 'mail_form'
 gem 'tinymce-rails'
 gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
+gem 'sendgrid'
 
 # Administration
 gem 'rails_admin'

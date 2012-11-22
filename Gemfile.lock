@@ -144,6 +144,11 @@ GEM
     polyglot (0.3.3)
     postgresql_lo_streamer (0.1.1)
       rails (~> 3.2.8)
+    prettyphoto-rails (0.1.1)
+      jquery-rails
+      rails (>= 3.1)
+      sass-rails
+      uglifier
     pry (0.9.10)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -298,6 +303,7 @@ DEPENDENCIES
   mail_form
   pg
   postgresql_lo_streamer
+  prettyphoto-rails
   pry
   rails (= 3.2.8)
   rails_admin

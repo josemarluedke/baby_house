@@ -2,12 +2,18 @@ h1.title
   = "Atividade: #{@activity.name}"
 
 .activity
+  .date = l @activity.date
   .description = @activity.description.html_safe
 
-  h2 Fotos
-  - for image in @activity.activity_images
-    = image_tag image.image.url, size: "100x100"
+  .photos
+    h2 Fotos da atividade
+    - unless @activity.activity_images.any?
+      p Nenhuma foto ainda.
 
+    - for image in @activity.activity_images
+      .image
+        = link_to "#{image.image.url}.jpg", rel: "prettyPhoto[pp_gal]", title: "" do
+          - image_tag image.image.url, size: "100x75", alt: ""
 
-p
-  = link_to "Voltar para a lista de atividades", activities_path
+  p.back
+    = link_to "Voltar para a lista de atividades", activities_path

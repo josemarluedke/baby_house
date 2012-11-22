@@ -2,6 +2,8 @@ App = window.App =
   Common:
     init: ->
       @flash()
+      $(document).ready ->
+        $("a[rel^='prettyPhoto']").prettyPhoto({social_tools: ""})
 
     finish: ->
 
