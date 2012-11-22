@@ -1,0 +1,78 @@
+pt-BR:
+  devise:
+    registrations:
+      edit:
+        provider: "Provedor"
+        connect_disconnect: "Conectar/Desconectar"
+        unhappy: "Infeliz?"
+        cancel_my_account: "Cancelar a minha conta"
+        edit_devise_resource: "Editar %{resource_name}"
+        connect_your_provider: "Conectar seu %{provider_name}"
+        disconnect_from_provider: "Desconectar do %{provider_name}"
+        back: "Voltar"
+        update: "Alterar"
+        are_you_sure: "Você tem ceteza?"
+      new:
+        sign_up: "Cadastro"
+        sign_in: "Login"
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação de senha"
+        omniauth_description: "Complete seu cadastro definindo uma senha."
+    sessions:
+      new:
+        sign_in: "Login"
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Reenviar instruções de confirmação"
+    mailer:
+      confirmation_instructions:
+        subject: "Instruções para confirmação de e-mail"
+        greeting: "Bem-Vindo %{recepient}!"
+        instruction: "Você pode confirmar a sua conta de e-mail através do link a seguir:"
+        action: "Confirmar a minha conta"
+      reset_password_instructions:
+        subject: "Enviar instruções senha"
+        greeting: "Olá %{recepient}!"
+        instruction: "Alguém pediu um link para alterar sua senha, e você pode fazer isso através do link a seguir."
+        action: "Alterar minha senha"
+        instruction_2: "Se você não pediu isso, por favor, ignore este e-mail."
+        instruction_3: "Sua senha não vai mudar até que você acessar o link acima e criar uma nova senha."
+      unlock_instructions:
+        subject: "Instruções para desbloquear sua conta"
+        greeting: "Olá %{recepient}!"
+        message: "Sua conta foi bloqueada devido a a quantidade excessiva de sinal sem sucesso nas tentativas."
+        instruction: "Clique no link abaixo para desbloquear sua conta:"
+        action: "Desbloquear a minha conta"
+    passwords:
+      edit:
+        change_your_password: "Alterar sua senha"
+        new_password: "Nava senha"
+        confirm_your_new_password: "Confirme sua nova senha"
+        change_my_password: "Alterar minha senha"
+      new:
+        forgot_your_password: "Esqueceu sua senha?"
+        send_me_reset_password_instructions: "Enviar instruções de redefinição de senha"
+
+    unlocks:
+      new:
+        resend_unlock_instructions: "Reenviar instruções para desbloquear conta"
+    shared:
+      are_you_sure: "Você tem certeza?"
+      update: "Alterar"
+
+      social_links:
+        sign_in_with: "Fazer login com %{provider}"
+      links:
+        sign_in: "Login"
+        sign_up: "Cadastro"
+        reset_your_password: "Restabeleça a sua senha"
+        didn_t_receive_confirmation_instructions?: "Não recebeu instruções de confirmação?"
+        didn_t_receive_unlock_instructions?: "Não recebeu instruções de desbloqueio?"
+        unlock_my_account: "Desbloquear minha conta"
+        confirm_my_account: "Confirmar a minha conta"
+        change_my_password: "Alterar minha senha"
+        or: " ou "
+        back: "Voltar"
+

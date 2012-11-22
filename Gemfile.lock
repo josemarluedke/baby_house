@@ -277,6 +277,7 @@ PLATFORMS
 DEPENDENCIES
   auto_html
   awesome_print
+  bootstrap-sass
   capybara
   carrierwave
   carrierwave-postgresql
