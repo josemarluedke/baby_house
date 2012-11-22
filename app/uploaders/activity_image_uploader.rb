@@ -17,6 +17,7 @@ class ActivityImageUploader < CarrierWave::Uploader::Base
   # Process files as they are uploaded:
   # process :scale => [200, 300]
   process :resize_to_fill => [500, 400]
+  process :convert => 'jpg'
 
   def extension_white_list
     %w(jpg jpeg gif png)
