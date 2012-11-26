@@ -9,6 +9,12 @@ BabyHouse::Application.routes.draw do
   resources :contact, only: [:new, :create]
   root :to => "pages#index"
 
+  resources :activity_images, only: [:destroy] do
+    collection do
+      post :upload
+    end
+  end
+
   get '/contato', :to => "contact#new", :as => "contato"
 
   # Retrieve images from database
