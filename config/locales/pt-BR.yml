@@ -15,3 +15,64 @@ pt-BR:
       title: "Technical information about the user"
       remote_ip: "IP Address"
       user_agent: "Browser"
+  activerecord:
+    models:
+      activity: "Atividades"
+      activity_image: "Fotos das atividades"
+      admin_user: "Usuários administradores"
+      category: "Categorias"
+      image: "Imagens"
+      page: "Páginas"
+      parent: "Pais"
+      student: "Alunos"
+      team: "Turmas"
+    attributes:
+      activity:
+        name: "Nome"
+        description: "Descrição"
+        date: "Data"
+        cover: "Imagem principal"
+        teams: "Turmas"
+        activity_images: "Fotos das atividades"
+      activity_image:
+        activity: "Atividade"
+        image: "Foto"
+      banner:
+        title: "Título"
+        description: "Descrição"
+        link_text: "Texto do link"
+        link_url: "Link (url)"
+        visible: "Visível"
+        image: "Imagem"
+      admin_user:
+        name: "Nome"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+      category:
+        name: "Nome"
+        pages: "Páginas"
+      image:
+        image: "Imagem"
+        description: "Descrição"
+      page:
+        title: "Título"
+        body: "Conteúdo"
+        slug: "Slug"
+        category: "Categoria"
+      parent:
+        name: "Nome"
+        relationship: "Relação"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+        students: "Alunos"
+      student:
+        name: "Nome"
+        birthdate: "Data de nascimento"
+        parents: "Pais"
+        teams: "Turmas"
+      team:
+        code: "Código"
+        name: "Nome"
+        shift: "Turno"
+        students: "Alunos"
+        activities: "Atividades"
