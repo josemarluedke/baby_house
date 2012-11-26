@@ -7,4 +7,15 @@ class Activity < ActiveRecord::Base
   mount_uploader :cover, CoverUploader
 
   validates :name, :cover, presence: true
+
+  def can_see_activity(current_parent)
+    teams.each do |team|
+      team.students.each do |student|
+        return true if student.parents.include? current_parent
+      end
+    end
+    false
+  end
+
+  scope :parent_activities, ->(current_parent){ all.map { |activity| activity if activity.can_see_activity(current_parent)} }
 end

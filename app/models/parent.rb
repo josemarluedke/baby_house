@@ -8,4 +8,9 @@ class Parent < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :relationship, :student_ids
   validates :name, presence: true
+
+  def admin?
+  	false
+  end
+
 end

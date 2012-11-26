@@ -21,3 +21,18 @@ Parent.blueprint do
   confirmed_at { Date.today }
 end
 
+Student.blueprint do
+  name {"Josemar Luedke Jr."}
+end
+
+Team.blueprint do
+  code {"0001"}
+  name {"Capoeira"}
+  shift {"tarde"}
+end
+
+Activity.blueprint do
+  name {"Capoeira"}
+  cover { File.open("#{Rails.root}/spec/fixtures/images/image.jpg") }
+end
+
