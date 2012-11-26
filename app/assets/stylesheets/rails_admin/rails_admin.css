@@ -7,3 +7,19 @@ body.rails_admin .form-horizontal textarea {
   width: 80%;
   height: 300px;
 }
+.images-list {
+  margin-top: 10px;
+}
+.images-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.image-item {
+  float: left;
+  margin: 5px;
+  width: 100px;
+}
+
+

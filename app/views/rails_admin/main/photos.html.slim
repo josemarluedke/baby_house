@@ -3,13 +3,29 @@ div
 
   javascript: 
     $(function () {
+      var addToList = function(activityImageId, activityImageUrl) {
+        return $(".images-list").append('<div class="image-item"><img class="image-thumb" height="75" src="'+activityImageUrl+'" width="100"><a href="/activity_images/'+activityImageId+'" data-method="delete" rel="nofollow">Remover</a></div>');
+      };
       var uploader = new qq.FileUploader({
           // pass the dom node (ex. $(selector)[0] for jQuery users)
           element: document.getElementById('file-uploader'),
           // path to server-side upload script
-          action: '/image_upload',
+          action: '/activity_images/upload',
           params: {authenticity_token: $("meta[name='csrf-token']").attr("content"), activity_id: $('.activity_id').html()},
-          uploadButtonText: "Adicionar fotos"
+          uploadButtonText: "Adicionar fotos",
+          allowedExtensions: ['jpeg', 'jpg', 'gif', 'png'],
+          acceptedFiles: "image/jpeg,image/gif,image/png",
+          messages: {
+                    typeError: "As extensões de arquivo permitidas são {extensions}.",
+                    sizeError: "{file} é grande demais. O tamanho máximo é {sizeLimit}",
+                    emptyError: "{file} está vazio, selecione os novamente os arquivos sem ele",
+                    onLeave: "Há arquivos sendo enviados, se sair agora o envio será cancelado"
+                    },
+          onComplete: function(id, fileName, response) {
+            if (response.success) {
+              return addToList(response.activityImageId, response.activityImageUrl);
+            }
+          }
       });
       $(".qq-upload-button").addClass("btn btn-primary")
     });
@@ -18,8 +34,9 @@ div
   #file-uploader
     | Please enable JavaScript to use file uploader.
 
-  /= rails_admin_form_for @object, :url => edit_path(@abstract_model, @object.id), :as => @abstract_model.param_key, :html => { :method => "put", :multipart => true, :class => "form-horizontal denser", :data => { :title => @page_name } } do |form|
-    /.form-actions
-      /button.btn.btn-primary[type="submit" name="_save" data-disable-with=t("admin.form.save")]
-        /i.icon-white.icon-ok
-        /= t("admin.form.save")
+  .images-list
+    - for image in Activity.find(params[:id]).activity_images
+      .image-item
+        = image_tag image.image.url, :class => 'image-thumb', size: '100x75'
+        = link_to "Remover", main_app.activity_image_path(image), :method => :delete
+  br/
