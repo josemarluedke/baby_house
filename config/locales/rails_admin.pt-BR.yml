@@ -66,6 +66,12 @@ pt-BR:
         breadcrumb: "Editar"
         link: "Editar este %{model_label}"
         done: "atualizado"
+      photos:
+        title: "Adicionar fotos a '%{object_label}'"
+        menu: "Fotos"
+        breadcrumb: "Fotos"
+        link: "Adicionar fotos a %{model_label}"
+        done: "fotos adicionadas"
       delete:
         title: "Remover %{model_label} '%{object_label}'"
         menu: "Remover"
@@ -108,7 +114,7 @@ pt-BR:
       confirmation: "Sim, tenho a certeza"
       delete_confirmation: "Confirmar apagar"
       bulk_delete: "Os seguintes objetos serão apagados, o que pode apagar ou deixar orfãos as dependências relacionadas"
-    export:      
+    export:
       confirmation: "Exportar para %{name}"
       select: "Selecionar campos para exportar"
       fields_from: "Campos de %{name}"

@@ -1,6 +1,11 @@
 # RailsAdmin config file. Generated on November 07, 2012 00:18
 # See github.com/sferik/rails_admin for more informations
 
+require Rails.root.join('lib', 'rails_admin_photos.rb')
+
+
+
+
 RailsAdmin.config do |config|
 
 
@@ -391,4 +396,30 @@ RailsAdmin.config do |config|
   #     # using `field` instead of `configure` will exclude all other fields and force the ordering
   # end
 
+  #config.actions do
+    #photos
+  #end
+  #
+  config.actions do
+    # root actions
+    dashboard                     # mandatory
+    # collection actions
+    index                         # mandatory
+    new
+    export
+    history_index
+    bulk_delete
+    # member actions
+    show
+    edit
+    delete
+    history_show
+    show_in_app
+
+    # Set the custom action here
+    photos
+  end
+
+  config.model 'Activity' do
+  end
 end
