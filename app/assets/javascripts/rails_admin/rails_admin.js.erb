@@ -56,6 +56,9 @@ $(function () {
 
 $(document).live('rails_admin.dom_ready', function(){
   $('textarea').tinymce({
-     theme: 'advanced'
+    theme: 'advanced',
+    relative_urls : false,
+    remove_script_host : false,
+    convert_urls : false
    });
 });
