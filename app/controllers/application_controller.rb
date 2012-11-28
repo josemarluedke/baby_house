@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   before_filter do
-    @about_pages = Page.where(category_id: Category.where(name: "Sobre a Baby House"))
-    @pedagogy_pages = Page.where(category_id: Category.where(name: "Pedagogia para a vida"))
-    @portal_pages = Page.where(category_id: Category.where(name: "Portal das famílias"))
+    @about_pages = Page.where(category_id: Category.where(name: "Sobre a Baby House")).order('created_at ASC')
+    @pedagogy_pages = Page.where(category_id: Category.where(name: "Pedagogia para a vida")).order('created_at ASC')
+    @portal_pages = Page.where(category_id: Category.where(name: "Portal das famílias")).order('created_at ASC')
   end
 
   protected

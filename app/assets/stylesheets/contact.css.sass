@@ -1,5 +1,17 @@
 #contact
   overflow: hidden
+  input
+    &[type=text], &[type=password], &[type=url], &[type=email], &[type=tel], &.text, &.title
+      float: left
+      font-size: 1em
+      border: none
+      padding: 7px 15px
+      width: 305px
+      background: #F1F1F1
+      +border-radius(3px)
+      &:focus
+        outline: none
+        border-color: #AAA
   form
     .subject
       +grid(4)
