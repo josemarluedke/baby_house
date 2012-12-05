@@ -24,7 +24,7 @@ pt-BR:
       image: "Imagens"
       page: "Páginas"
       parent: "Pais"
-      student: "Alunos"
+      student: "Crianças"
       team: "Turmas"
     attributes:
       activity:
@@ -61,10 +61,10 @@ pt-BR:
         category: "Categoria"
       parent:
         name: "Nome"
-        relationship: "Relação"
+        relationship: "Vinculo"
         password: "Senha"
         password_confirmation: "Confirmação da senha"
-        students: "Alunos"
+        students: "Crianças"
       student:
         name: "Nome"
         birthdate: "Data de nascimento"
@@ -74,5 +74,5 @@ pt-BR:
         code: "Código"
         name: "Nome"
         shift: "Turno"
-        students: "Alunos"
+        students: "Crianças"
         activities: "Atividades"
