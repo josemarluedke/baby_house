@@ -110,17 +110,20 @@ section#banner
       top: -25px
       left: 0
       bottom: 0
-    li a
-      display: block
-      padding: 30px 33px
-      line-height: 1.1em
-      font-size: 1.7em
-      font-family: 'LeagueGothicRegular', Muli, sans-serif
+    li
       +background-image(linear-gradient(#FFF, #F1F1F1))
-      span
-        color: #555
-        font-size: 0.8em
-
+      a
+        display: block
+        padding: 30px 33px
+        line-height: 1.1em
+        font-size: 1.7em
+        font-family: 'LeagueGothicRegular', Muli, sans-serif
+        span
+          color: #555
+          font-size: 0.8em
+        &.first
+          z-index: 1000
+          position: relative
 
 section#info
   article
