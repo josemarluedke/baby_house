@@ -13,14 +13,14 @@ section#news
 section#buckets
   ul
     li
-      a href=page_path(@about_pages.first)
-        = image_tag "tour-virtual.png", :alt => "Baby House - Escola Infantil"
+      a href=page_path(@tour)
+        = image_tag "tour-virtual.png", :alt => "#{@tour.title} | Baby House - Escola Infantil"
     li
-      a href=contato_url
-        = image_tag "visita.png", :alt => "Baby House - Escola Infantil"
+      a href=page_path(@visit)
+        = image_tag "visita.png", :alt => "#{@visit.title} | Baby House - Escola Infantil"
     li
-      a href=contato_url
-        = image_tag "matricula.png", :alt => "Baby House - Escola Infantil"
+      a href=page_path(@enroll)
+        = image_tag "matricula.png", :alt => "#{@enroll.title} | Baby House - Escola Infantil"
 
 
 
