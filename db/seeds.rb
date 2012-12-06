@@ -6,3 +6,4 @@
 Category.create name: "Sobre a Baby House"
 Category.create name: "Pedagogia para a vida"
 Category.create name: "Portal das famílias"
+Category.create name: "Home"
