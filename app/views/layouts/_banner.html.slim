@@ -7,19 +7,20 @@ section#banner
   ul
     li
       a.first[href=page_path(@nursery)]
-        | Berçário e Minimaternal 
+        = @nursery.title
+        | &nbsp;
         br
         span
           | (0 a 2 anos)
     li
       a[href=page_path(@maternal)]
-        | Maternal 
+        = @maternal.title
         br
         span
           | (2 a 4 anos)
     li
       a[href=page_path(@garden)]
-        | Jardim 
+        = @garden.title
         br
         span
           | (4 a 6 anos)
