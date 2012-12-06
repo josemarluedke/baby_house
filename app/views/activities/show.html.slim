@@ -5,6 +5,12 @@ h1.title
   .date = l(@activity.date) if @activity.date.present?
   .description = @activity.description.html_safe
 
+  .teams
+    h2 Turmas
+    ul
+      - for team in @activity.teams
+        li
+          = team.name
   .photos
     h2 Fotos da atividade
     - unless @activity.activity_images.any?
