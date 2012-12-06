@@ -19,7 +19,7 @@ h1.title
     - for image in @activity.activity_images
       .image
         = link_to "#{image.image.url}.jpg", rel: "prettyPhoto[pp_gal]", title: "" do
-          - image_tag "#{image.image.url}.jpg", size: "100x75", alt: ""
+          - image_tag "#{image.image.url}.jpg", size: "100x56", alt: ""
 
   p.back
     = link_to "Voltar para a lista de atividades", activities_path
