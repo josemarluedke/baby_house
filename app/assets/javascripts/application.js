@@ -15,6 +15,7 @@
 
 //= require ./lib/underscore.js
 //= require ./lib/backbone.js
+//= require ./lib/jquery.cycle
 //= require_tree ./lib
 //= require ./app.js
 //= require_tree ./app
