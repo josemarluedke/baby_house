@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  attr_accessible :body, :slug, :title, :category_id
+  attr_accessible :body, :slug, :title, :category_id, :category
   extend FriendlyId
   friendly_id :title, use: :slugged
 

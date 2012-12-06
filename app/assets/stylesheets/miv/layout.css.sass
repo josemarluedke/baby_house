@@ -10,6 +10,8 @@
     margin-top: 30px
 
 header
+  z-index: 105
+  position: relative
   height: 163px
   .wrapper
     padding: 10px
@@ -93,17 +95,59 @@ header
             display: block
 
 section#banner
+  position: relative
   background: white
   border: 10px solid $blue1
   margin-top: -55px
   padding-top: 35px
-  .image
+  .slide
     float: left
     margin-top: -25px
-    .resize
-      width: 725px
-      height: 330px
-      overflow: hidden
+    .image
+      .resize
+        width: 725px
+        height: 330px
+        overflow: hidden
+  nav
+    $size: 10px
+    width: 725px
+    z-index: 100
+    position: absolute
+    top: 170px
+    a
+      cursor: pointer
+      display: block
+      font-size: 180%
+      font-family: monospace
+      font-weight: bold
+      padding: 13px 15px
+      +box-shadow(0 2px 3px rgba(black, .7))
+      position: relative
+      +background-image(linear-gradient(#FFF, #F1F1F1))
+      &:active
+        bottom: -1px
+      &:after
+        content: ""
+        height: 0
+        width: 0
+        bottom: -$size
+        position: absolute
+        border-top: $size solid #CCC
+    a.next
+      float: right
+      right: -$size
+      &:after
+        border-right: $size solid transparent
+        right: 0
+
+    a.prev
+      float: left
+      left: -$size
+      &:after
+        border-left: $size solid transparent
+        left: 0
+
+
   ul
     float: right
     margin:

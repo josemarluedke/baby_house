@@ -25,9 +25,9 @@
             li = link_to "Sair", destroy_parent_session_path, method: :delete
           - else
             li = link_to "Fazer login", new_parent_session_path
-        - if @portal_pages
-          - for page in @portal_pages
-            li= link_to page.title, page_path(page)
+          - if @portal_pages
+            - for page in @portal_pages
+              li= link_to page.title, page_path(page)
 
       li
         = link_to("Entre em contato", contato_path, :class => "menu1")
