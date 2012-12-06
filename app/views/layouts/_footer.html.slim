@@ -8,12 +8,12 @@
       span
         | nas redes sociais
     p style="margin-top: 20px"
-      a.twitter-share-button href="https://twitter.com/share"
+      a.twitter-share-button href="https://twitter.com/share" data-url="#{request.protocol}#{request.host_with_port}" data-text="Baby House - Escola Infantil - Preparando para a Vida #{request.protocol}#{request.host_with_port}"
       css:
         .twitter-share-button { float: left; margin-left: 50px }
       javascript:
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-      .fb-like data-colorscheme="dark" data-layout="button_count" data-send="false" data-show-faces="false" data-width="100" style="width: 100px; float: left"
+      .fb-like data-colorscheme="dark" data-layout="button_count" data-send="false" data-show-faces="false" data-width="100" style="width: 100px; float: left" data-href="#{request.protocol}#{request.host_with_port}"
 
   address.contact
     strong Baby House - Escola de Educação Infantil
