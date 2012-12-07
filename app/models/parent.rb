@@ -16,7 +16,7 @@ class Parent < ActiveRecord::Base
   def before_import_save(row, map)
     self.password = "password"
     self.password_confirmation = "password"
-    #self.confirmed_at = Time.now
-    self.send_confirmation_instructions
+    self.confirmed_at = Time.now
+    #self.send_confirmation_instructions
   end
 end
