@@ -49,6 +49,7 @@ module BabyHouse
     # Tell the I18n library where to find your translations
     # For use I18n in initializers we need this.
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
+    I18n.default_locale = :"pt-BR"
 
     config.i18n.default_locale = :"pt-BR"
     config.i18n.locale :"pt-BR"
