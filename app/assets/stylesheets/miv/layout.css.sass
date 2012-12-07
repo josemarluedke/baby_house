@@ -170,12 +170,26 @@ section#banner
           position: relative
 
 section#info
-  article
-    +grid(7)
-    +alpha
+  +grid(7)
+  +alpha
+
+section#news
+  +grid(5)
+  +alpha
+  margin-bottom: 20px
+  ul
+    li
+      float: none
+      padding: 10px 0
+      .published
+        color: #888
+      .title
+        font-size: 125%
+        padding: 10px 0
 
 
 section#buckets
+  +legacy-pie-clearfix
   ul
     li
       +grid(4)

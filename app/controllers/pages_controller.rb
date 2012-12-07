@@ -11,5 +11,7 @@ class PagesController < ApplicationController
     @tour = Page.where(category_id: Category.where(name: "Faça um tour virtual")).first
     @visit = Page.where(category_id: Category.where(name: "Visite a Baby House")).first
     @enroll = Page.where(category_id: Category.where(name: "Matricule seu filho")).first
+    feed = Blog.fetch_last_posts
+    @entries = feed.entries.first(3)
   end
 end

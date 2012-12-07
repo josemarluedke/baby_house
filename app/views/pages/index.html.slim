@@ -5,10 +5,19 @@ section#info
     = link_to home.title, page_path(home)
   article
     = home.body.html_safe
-  blockquote
-    | TODO: Quisque commodo luctus libero, eget dapibus enim auctor sit amet. 
+  /blockquote
+    | Escola Baby House
+    br/
+    | Preparando para a Vida.
 
 section#news
+  h1
+    a O que está rolando por ai?
+  ul
+    - for entry in @entries
+      li
+        .title= link_to entry.title, entry.entry_id, target: :_blank
+        .published= l entry.published.to_date, format: :long
 
 section#buckets
   ul

@@ -35,6 +35,7 @@ gem 'mail_form'
 gem 'tinymce-rails'
 gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
 gem 'sendgrid'
+gem 'feedzirra'
 
 # Administration
 gem 'rails_admin'
