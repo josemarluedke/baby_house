@@ -5,9 +5,10 @@ section#banner
         .resize
           = link_to banner.link_url do
             = image_tag banner.image.url, :alt => banner.title
-  nav
-    a.prev &lt;
-    a.next &gt;
+  - if @banners.size > 1
+    nav
+      a.prev &lt;
+      a.next &gt;
   ul
     li
       a.first[href=page_path(@nursery)]
