@@ -1,10 +1,8 @@
-- home = Page.where(category_id: Category.where(name: "Quem é a Baby House?")).first
-
 section#info
   h1
-    = link_to home.title, page_path(home)
+    = link_to @home.title, page_path(@home)
   article
-    = home.body.html_safe
+    = @home.body.html_safe
 
 section#news
   h1

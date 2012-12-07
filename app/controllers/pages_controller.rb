@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 
   def index
     @banners = Banner.visible
+    @home = Page.where(category_id: Category.where(name: "Quem é a Baby House?")).first
     @nursery = Page.where(category_id: Category.where(name: "Berçário e Minimaternal")).first
     @maternal = Page.where(category_id: Category.where(name: "Maternal")).first
     @garden = Page.where(category_id: Category.where(name: "Jardim")).first
