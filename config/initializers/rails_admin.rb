@@ -418,8 +418,21 @@ RailsAdmin.config do |config|
 
     # Set the custom action here
     photos
+    import
   end
 
   config.model 'Activity' do
+  end
+end
+
+
+RailsAdminImport.config do |config|
+  config.model Parent do
+    excluded_fields do
+      [:student, :parentage, :remember_me, :student_ids, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip, :last_sign_in_ip, :confirmation_token, :confirmation_sent_at, :confirmed_at]
+    end
+    #extra_fields do
+      #[:password, :password_confirmation]
+    #end
   end
 end

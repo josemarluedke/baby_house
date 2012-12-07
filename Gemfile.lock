@@ -197,6 +197,7 @@ GEM
       rails (~> 3.1)
       remotipart (~> 1.0)
       sass-rails (~> 3.1)
+    rails_admin_import (0.1.8)
     railties (3.2.8)
       actionpack (= 3.2.8)
       activesupport (= 3.2.8)
@@ -324,6 +325,7 @@ DEPENDENCIES
   pry
   rails (= 3.2.8)
   rails_admin
+  rails_admin_import
   rmagick
   rspec-rails (>= 2.11.0)
   sass-rails (~> 3.2.5)

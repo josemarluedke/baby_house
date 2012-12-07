@@ -78,6 +78,13 @@ pt-BR:
         breadcrumb: "Remover"
         link: "Remover '%{object_label}'"
         done: "removido"
+      import:
+        title: "Importar"
+        menu: "Importar"
+        breadcrumb: "Importar"
+        link: "Importar"
+        bulk_link: "Importar"
+        done: "Importado"
       bulk_delete:
         title: "Remover %{model_label_plural}"
         menu: "Remover vários"

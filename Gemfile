@@ -39,6 +39,7 @@ gem 'feedzirra'
 
 # Administration
 gem 'rails_admin'
+gem 'rails_admin_import'
 
 # Images
 gem 'carrierwave'
