@@ -45,7 +45,7 @@ gem 'rails_admin_import'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'carrierwave-postgresql'
-gem 'postgresql_lo_streamer'
+gem 'postgresql_lo_streamer', git: 'git://github.com/diogob/postgresql_lo_streamer.git'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'

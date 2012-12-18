@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/diogob/postgresql_lo_streamer.git
+  revision: 5b59727f5040a88300bb80536a307898e31b984b
+  specs:
+    postgresql_lo_streamer (0.1.1)
+      rails (~> 3.2.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -154,8 +161,6 @@ GEM
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
-    postgresql_lo_streamer (0.1.1)
-      rails (~> 3.2.8)
     prettyphoto-rails (0.1.1)
       jquery-rails
       rails (>= 3.1)
@@ -320,7 +325,7 @@ DEPENDENCIES
   machinist (>= 2.0)
   mail_form
   pg
-  postgresql_lo_streamer
+  postgresql_lo_streamer!
   prettyphoto-rails
   pry
   rails (= 3.2.8)
