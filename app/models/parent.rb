@@ -6,7 +6,7 @@ class Parent < ActiveRecord::Base
   # :token_authenticatable, :lockable, :timeoutable, :registerable and :omniauthable
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :relationship, :student_ids
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :relationship, :student_ids, :code
   validates :name, presence: true
 
   def admin?

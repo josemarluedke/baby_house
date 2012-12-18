@@ -61,6 +61,7 @@ pt-BR:
         category: "Categoria"
       parent:
         name: "Nome"
+        code: "Código"
         relationship: "Vinculo"
         password: "Senha"
         password_confirmation: "Confirmação da senha"
@@ -68,10 +69,12 @@ pt-BR:
       student:
         name: "Nome"
         birthdate: "Data de nascimento"
+        code: "Código"
         parents: "Pais"
         teams: "Turmas"
       team:
         code: "Código"
+        code_year: "Código deste ano"
         name: "Nome"
         shift: "Turno"
         students: "Crianças"
