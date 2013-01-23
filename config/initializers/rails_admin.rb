@@ -138,7 +138,12 @@ RailsAdmin.config do |config|
       field :code_year
       field :shift, :enum do
         enum do
-          ["Berçário", "Minimaternal", "Maternal I"]
+          ["Manhã", "Tarde"]
+        end
+      end
+      field :level, :enum do
+        enum do
+          ["Berçário", "Minimaternal", "Maternal I", "Maternal II", "Jardim I", "Jardim II"]
         end
       end
       field :students

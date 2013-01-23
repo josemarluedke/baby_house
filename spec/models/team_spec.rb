@@ -5,6 +5,7 @@ describe Team do
     it { should validate_presence_of :code }
     it { should validate_presence_of :name }
     it { should validate_presence_of :shift }
+    it { should validate_presence_of :level }
   end
 
   describe "Associations" do
