@@ -6,6 +6,7 @@ require Rails.root.join('lib', 'rails_admin_photos.rb')
 
 RailsAdmin.config do |config|
 
+  config.authorize_with :cancan, AdminAbility
 
   ################  Global configuration  ################
 
@@ -149,6 +150,14 @@ RailsAdmin.config do |config|
       field :students
       field :activities
     #end
+  end
+  config.model AdminUser do
+    edit do
+      field :email
+      field :password
+      field :password_confirmation
+      field :post_photos
+    end
   end
 end
 

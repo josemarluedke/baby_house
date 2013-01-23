@@ -48,6 +48,7 @@ pt-BR:
         name: "Nome"
         password: "Senha"
         password_confirmation: "Confirmação da senha"
+        post_photos: "Somente administrar fotos/atividades"
       category:
         name: "Nome"
         pages: "Páginas"
