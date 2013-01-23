@@ -22,6 +22,7 @@
           .arrow
           - if parent_signed_in?
             li = link_to "Atividades", activities_path
+            li = link_to "Editar meus dados", edit_parent_path(1)
             li = link_to "Sair", destroy_parent_session_path, method: :delete
           - else
             li = link_to "Fazer login", new_parent_session_path
@@ -31,4 +32,9 @@
 
       li
         = link_to("Entre em contato", contato_path, :class => "menu1")
+        ul.submenu
+          .arrow
+          li = link_to("Contatos Gerais", contato_path)
+          li = link_to("Trabalhe na Baby House", apply_path)
+
   .clear

@@ -11,6 +11,18 @@ pt-BR:
         email: "E-mail"
         phone: "Telefone"
         message: "Mensagem"
+      apply_form:
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
+        role: "Cargo pretendido"
+        specialist_teacher: "Professor especializado - Detalhes"
+        role_other: "Outros cargos"
+        already_sent: "Já enviou currículo anteriormente?"
+        already_sent_year: "Ano em que enviou o currículo"
+        already_apply: "Já participou de processo de seleção conosco?"
+        already_apply_year: "Ano em que participou do processo de seleção"
+        file: "Anexar currículo com foto:"
     request:
       title: "Technical information about the user"
       remote_ip: "IP Address"

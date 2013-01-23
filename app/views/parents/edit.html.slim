@@ -1,0 +1,23 @@
+.sign_in_box
+  h2 Editar meus dados
+  br/
+  = simple_form_for(@parent) do |f|
+    .form-inputs
+      = f.input :name, :required => false, :autofocus => true, :wrapper => :prepend do
+        = content_tag :span, content_tag(:i, "", :class => 'icon-user'), :class => "add-on"
+        = f.input_field :name
+
+      = f.input :email, :required => false, :wrapper => :prepend do
+        = content_tag :span, content_tag(:i, "", :class => 'icon-envelope'), :class => "add-on"
+        = f.input_field :email
+
+      = f.input :password, :required => false, :wrapper => :prepend do
+        = content_tag :span, content_tag(:i, "", :class => 'icon-lock'), :class => "add-on"
+        = f.input_field :password
+
+      = f.input :password_confirmation, :required => false, :wrapper => :prepend do
+        = content_tag :span, content_tag(:i, "", :class => 'icon-lock'), :class => "add-on"
+        = f.input_field :password_confirmation
+
+      = f.button :submit, "Salvar", class: "btn-primary"
+

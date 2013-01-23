@@ -2,7 +2,6 @@
   overflow: hidden
   input
     &[type=text], &[type=password], &[type=url], &[type=email], &[type=tel], &.text, &.title
-      float: left
       font-size: 1em
       border: none
       padding: 7px 15px
@@ -12,6 +11,10 @@
       &:focus
         outline: none
         border-color: #AAA
+    &[type=radio]
+      margin-left: 1px
+      margin-right: 5px
+      float: left
   form
     .subject
       +grid(4)
@@ -26,8 +29,6 @@
         margin-bottom: 0
         li
           margin: 15px 0
-          input
-            float: left
           label
             cursor: pointer
             padding-left: 20px
@@ -40,19 +41,17 @@
       overflow: hidden
       float: left
     .your_data
+      +clearfix
       li
-        float: left
         margin-top: 10px
         label
           display: block
-          width: 65px
     .your_message
       overflow: hidden
       clear: both
       label
         display: block
     .submit
-      float: right
       margin-right: 122px
       margin-top: 10px
 
