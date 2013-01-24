@@ -16,10 +16,20 @@ h1.title
     - unless @activity.activity_images.any?
       p Nenhuma foto ainda.
 
-    - for image in @activity.activity_images
-      .image
-        = link_to "#{image.image.url}.jpg", rel: "prettyPhoto[pp_gal]", title: "" do
-          - image_tag "#{image.image.url}.jpg", size: "100x56", alt: ""
+    = form_for :buy_photos, :url => buy_photos_path(format: :json) , :remote => true do |f| 
+      = hidden_field_tag "activity_image_id", "", class: "activity_image_id"
+      - for image in @activity.activity_images
+        .image
+          = link_to "#{image.image.url}.jpg", rel: "prettyPhoto[pp_gal]", title: "" do
+            - image_tag "#{image.image.url}.jpg", size: "100x56", alt: ""
+          label
+            | Comprar: 
+            = check_box_tag "photos[activity_image_id]", image.id, BuyPhoto.where(activity_image_id: image.id, parent_id: current_parent.id).any?, class: "check_photo", :"data-id" => image.id
 
-  p.back
-    = link_to "Voltar para a lista de atividades", activities_path
+  section
+    br/
+    = link_to "Voltar para a lista de atividades", activities_path, class: "btn btn-primary"
+    | &nbsp
+    = link_to "Visualizar todas fotos selecionadas", "#viewSelected", class: "btn btn-primary viewSelected", :"data-toggle" => "modal", :"data-url" => buy_photos_url
+
+= render 'activities/view_selected_modal'

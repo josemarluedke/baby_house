@@ -21,3 +21,4 @@
 //= require_tree ./app
 //= require ./init.js
 //= require prettyphoto-rails
+//= require bootstrap-modal

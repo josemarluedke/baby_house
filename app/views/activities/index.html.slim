@@ -6,9 +6,17 @@ h1.title Atividades
     p Nenhuma atividade ainda.
   - for activity in @activities
     .activity-box
-      - #TODO make the cover
       .cover = link_to activity do
         = image_tag activity.cover.url
       .name = link_to activity.name, activity
       .date = l(activity.date) if activity.date.present?
       .description = truncate(strip_tags(activity.description), length: 70)
+
+section.buy
+  = link_to "Visualizar todas fotos selecionadas", "#viewSelected", class: "btn btn-primary", :"data-toggle" => "modal"
+  | &nbsp
+  = link_to "Concluir compra", "#finishBuy", class: "btn btn-primary", :"data-toggle" => "modal"
+
+
+  = render 'activities/view_selected_modal'
+  = render 'activities/finish_buy_modal'

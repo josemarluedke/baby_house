@@ -19,6 +19,7 @@ App = window.App =
         $(".flash").slideUp()
   Pages: {}
   Apply: {}
+  Activities: {}
 
 
 App.Pages.Index = Backbone.View.extend

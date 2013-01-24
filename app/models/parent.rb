@@ -1,6 +1,7 @@
 class Parent < ActiveRecord::Base
   has_many :parentages
   has_many :students, through: :parentages
+  has_many :buy_photos, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :lockable, :timeoutable, :registerable and :omniauthable
