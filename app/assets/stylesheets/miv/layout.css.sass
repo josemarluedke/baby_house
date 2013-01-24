@@ -66,8 +66,7 @@ header
           left: 10px
           right: 10px
           width: 88%
-          background: #FFF
-          background: rgba(0, 153, 255, 0.2)
+          background: #c6e5f9
           font-family: 'Muli', sans-serif
           text-transform: none
           li
@@ -84,6 +83,8 @@ header
               border-top: 1px solid #FFF
               padding: 10px
               font-weight: normal
+              position: relative
+              z-index: 305
               &:hover
                 background: #FFF
                 background: rgba(255, 255, 255, 0.5)
@@ -156,9 +157,9 @@ section#banner
       bottom: 0
     li
       +background-image(linear-gradient(#FFF, #F1F1F1))
+      padding: 30px 33px
       a
         display: block
-        padding: 30px 33px
         line-height: 1.1em
         font-size: 1.7em
         font-family: 'LeagueGothicRegular', Muli, sans-serif
@@ -166,7 +167,7 @@ section#banner
           color: #555
           font-size: 0.8em
         &.first
-          z-index: 1000
+          z-index: 205
           position: relative
 
 section#info
