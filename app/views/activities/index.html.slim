@@ -13,7 +13,7 @@ h1.title Atividades
       .description = truncate(strip_tags(activity.description), length: 70)
 
 section.buy
-  = link_to "Visualizar todas fotos selecionadas", "#viewSelected", class: "btn btn-primary", :"data-toggle" => "modal"
+  = link_to "Visualizar todas fotos selecionadas", "#viewSelected", class: "btn btn-primary viewSelected", :"data-toggle" => "modal", :"data-url" => buy_photos_url
   | &nbsp
   = link_to "Concluir compra", "#finishBuy", class: "btn btn-primary", :"data-toggle" => "modal"
 

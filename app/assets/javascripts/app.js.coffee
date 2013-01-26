@@ -4,9 +4,12 @@ App = window.App =
       @flash()
       $(document).ready ->
         $("a[rel^='prettyPhoto']").prettyPhoto({social_tools: ""})
+      App.router = new App.Router()
 
     finish: ->
-
+      if Backbone.history && not Backbone.history.started?
+        Backbone.history.start()
+        Backbone.history.started = true
     flash: ->
       setTimeout (->
         $(".flash").slideDown "slow"
@@ -20,6 +23,9 @@ App = window.App =
   Pages: {}
   Apply: {}
   Activities: {}
+  BuyPhotos: {}
+  Router: Backbone.Router.extend
+    initialize: (options)->
 
 
 App.Pages.Index = Backbone.View.extend

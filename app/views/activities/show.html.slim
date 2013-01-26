@@ -30,6 +30,4 @@ h1.title
     br/
     = link_to "Voltar para a lista de atividades", activities_path, class: "btn btn-primary"
     | &nbsp
-    = link_to "Visualizar todas fotos selecionadas", "#viewSelected", class: "btn btn-primary viewSelected", :"data-toggle" => "modal", :"data-url" => buy_photos_url
-
-= render 'activities/view_selected_modal'
+    = link_to "Visualizar todas fotos selecionadas", activities_path(anchor: "viewSelected"), class: "btn btn-primary"
