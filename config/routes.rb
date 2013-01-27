@@ -5,7 +5,11 @@ BabyHouse::Application.routes.draw do
 
   devise_for :parents
 
-  resources :buy_photos, only: [:index, :create, :destroy]
+  resources :buy_photos, only: [:index, :create, :destroy] do
+    collection do
+      get :buy
+    end
+  end
   resources :parents, only: [:edit, :update]
   resources :activities, only: [:index, :show]
   resources :pages, only: [:index, :show]

@@ -12,7 +12,7 @@ App.BuyPhotos.Modals = Backbone.View.extend
   events:
     "click .viewSelected": "viewSelected"
 
-  viewSelected:(event) ->
+  viewSelected: (event) ->
     $.ajax
       url: $(event.target).data('url')
       error: ->
@@ -20,5 +20,3 @@ App.BuyPhotos.Modals = Backbone.View.extend
       success: (data) ->
         $('#viewSelected .modal-content').html(data)
         new App.BuyPhotos.viewSelected()
-
-

@@ -26,6 +26,11 @@ class BuyPhotosController < ApplicationController
   end
 
   def buy
+    collection
+    if params[:print]
+      render 'buy_photos/buy', layout: 'print'
+      collection.destroy_all
+    end
   end
 
   protected

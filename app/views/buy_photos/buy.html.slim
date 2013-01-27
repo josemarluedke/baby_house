@@ -1,2 +1,50 @@
-h1 BuyPhotos#buy
-p Find me in app/views/buy_photos/buy.html.slim
+.print_content
+  h1 Solicitação de fotos
+
+  p
+    | Eu, #{current_parent.name}, responsável pela(s) criança(s): 
+    | #{current_parent.students.map(&:name).join(', ')} 
+  p.text-left
+    br/
+    | Solicito as seguintes fotos:
+
+    table.table.table-condensed
+      thead
+        tr
+          th #
+          th Atividade
+          th Nome do arquivo
+          th Id da foto
+      tbody
+        - for item in @buy_photos
+          - i ||= 0; i += 1
+          tr
+            td = i
+            td = item.activity_image.activity.name
+            td = item.activity_image.original_filename
+            td = item.activity_image.id
+
+  p.text-left
+    | Total de fotos solicitadas: #{@buy_photos.count}
+    
+    br/
+    | Valor total do pedido: #{number_to_currency (BuyPhoto::PRICE * @buy_photos.count)}
+
+  p
+    | Porto Alegre, #{l Time.now.to_date, format: :extension}
+    br/
+    br/
+    |______________________________________
+    br/
+    | Assitatura
+
+  - unless params[:print]
+    p
+      | Imprimir este formulário, assinar e entregar na secretaria com o valor correspondente.
+    p
+      = link_to "Continuar comprando", activities_path, class: "btn btn-primary"
+      | &nbsp
+      = link_to "Finalizar e imprimir", buy_buy_photos_url(print: true), class: "btn btn-primary buyBottom", target: "_blank"
+  - else
+    javascript:
+      window.print()
