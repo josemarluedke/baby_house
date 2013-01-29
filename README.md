@@ -33,15 +33,19 @@ Then just checkout the code, configure dependencies and run the tests:
 ## Setup Development and Test Databases
 
 
-1. Create your database.yml: 
+1. Create your database.yml:
 
 	`cp config/database.sample.yml config/database.yml`
 
 2. Create the local databases:
 
 	`bundle exec rake db:create`
- 
-3. Create the default configs
+
+2. Create the tables:
+
+	`bundle exec rake db:migrate`
+
+4. Create the default configs
 
 	```
 export sendgrid_username=your_sendgrid_username
