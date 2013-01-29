@@ -7,7 +7,7 @@ Site of Baby House School
 
 You'll need [RVM][] to isolate your development environment.
 
-Make sure you install `Ruby 1.9.2` on your [RVM][].
+Make sure you install `Ruby 1.9.3` on your [RVM][].
 
 Then just checkout the code, configure dependencies and run the tests:
 
@@ -48,3 +48,6 @@ export sendgrid_username=your_sendgrid_username
 export sendgrid_password=your_sendgrid_password
 	```
 
+[rvm]: https://rvm.io/
+[bundler]: http://gembundler.com/
+[Gemspec]: http://docs.rubygems.org/read/chapter/20
