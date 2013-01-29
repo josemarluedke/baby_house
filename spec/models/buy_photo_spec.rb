@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe BuyPhoto do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "Validations" do
+    it { should validate_uniqueness_of(:activity_image_id).scoped_to(:parent_id) }
+  end
 end

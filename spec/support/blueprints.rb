@@ -29,6 +29,7 @@ Team.blueprint do
   code {"0001"}
   name {"Capoeira"}
   shift {"tarde"}
+  level {"Maternal"}
 end
 
 Activity.blueprint do
