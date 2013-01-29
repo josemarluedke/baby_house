@@ -1,5 +1,7 @@
 App = window.App =
   Common:
+    initPage: ->
+
     init: ->
       @flash()
       $(document).ready ->
@@ -10,6 +12,7 @@ App = window.App =
       if Backbone.history && not Backbone.history.started?
         Backbone.history.start()
         Backbone.history.started = true
+
     flash: ->
       setTimeout (->
         $(".flash").slideDown "slow"
@@ -20,20 +23,11 @@ App = window.App =
         ), 10000
       $(window).click ->
         $(".flash").slideUp()
+
+  Router: Backbone.Router.extend
+    initialize: (options)->
+
   Pages: {}
   Apply: {}
   Activities: {}
   BuyPhotos: {}
-  Router: Backbone.Router.extend
-    initialize: (options)->
-
-
-App.Pages.Index = Backbone.View.extend
-  initialize: ->
-    $("#banner .slide").cycle
-      fx: "fade"
-      speed: "slow"
-      timeout: 6000
-      next: ".next"
-      prev: ".prev"
-
