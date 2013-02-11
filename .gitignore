@@ -15,3 +15,5 @@ capybara-*.html
 config/database.yml
 db/schema.rb
 public/uploads/
+public/assets/
+database.tar.zip
