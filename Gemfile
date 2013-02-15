@@ -39,8 +39,8 @@ gem 'rails_admin_import', '~> 0.1.8'
 # Images
 gem 'carrierwave', '~> 0.6.2'
 gem 'rmagick'
-gem 'carrierwave-postgresql'
-gem 'postgresql_lo_streamer', github: 'diogob/postgresql_lo_streamer'
+#gem 'carrierwave-postgresql'
+#gem 'postgresql_lo_streamer', github: 'diogob/postgresql_lo_streamer'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.5'

@@ -17,3 +17,4 @@ db/schema.rb
 public/uploads/
 public/assets/
 database.tar.zip
+public/uploads_development/
