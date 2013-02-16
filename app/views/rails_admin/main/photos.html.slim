@@ -1,16 +1,17 @@
 div
   .activity_id.hide= params[:id]
-
+  .activity_images_upload_url.hide = main_app.upload_activity_images_url()
+  .activity_images_destroy_url.hide = main_app.activity_image_url("__id__")
   javascript: 
     $(function () {
       var addToList = function(activityImageId, activityImageUrl) {
-        return $(".images-list").append('<div class="image-item"><img class="image-thumb" height="75" src="'+activityImageUrl+'" width="100"><a href="/activity_images/'+activityImageId+'" data-method="delete" rel="nofollow">Remover</a></div>');
+        return $(".images-list").append('<div class="image-item"><img class="image-thumb" height="75" src="'+activityImageUrl+'" width="100"><a href="'+$('.activity_images_destroy_url').html().replace( "__id__", activityImageId)+'" data-method="delete" rel="nofollow">Remover</a></div>');
       };
       var uploader = new qq.FileUploader({
           // pass the dom node (ex. $(selector)[0] for jQuery users)
           element: document.getElementById('file-uploader'),
           // path to server-side upload script
-          action: '/activity_images/upload',
+          action: $('.activity_images_upload_url').html(),
           params: {authenticity_token: $("meta[name='csrf-token']").attr("content"), activity_id: $('.activity_id').html()},
           uploadButtonText: "Adicionar fotos",
           allowedExtensions: ['jpeg', 'jpg', 'gif', 'png'],
@@ -38,5 +39,5 @@ div
     - for image in Activity.find(params[:id]).activity_images
       .image-item
         = image_tag image.image.url, :class => 'image-thumb', size: '100x75'
-        = link_to "Remover", main_app.activity_image_path(image), :method => :delete
+        = link_to "Remover", main_app.activity_image_url(image), :method => :delete
   br/
