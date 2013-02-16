@@ -2,6 +2,6 @@
   - for item in @buy_photos
     - image = item.activity_image
     .image
-      = image_tag "#{image.image.url}.jpg", size: "100x56", alt: ""
+      = image_tag image.image.url, size: "100x56", alt: ""
       br/
       = link_to "Remover", item, method: :delete, remote: true, class: "remove-photo"

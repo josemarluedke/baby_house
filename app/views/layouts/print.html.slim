@@ -6,6 +6,6 @@ html
     = stylesheet_link_tag "application", "http://fonts.googleapis.com/css?family=Muli:300, 400" 
     = javascript_include_tag "application" 
     = csrf_meta_tags 
-  body
+  body.print
     = initjs_tag
     = yield
