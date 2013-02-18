@@ -6,7 +6,7 @@
 AdminUser.create! email: "admin@example.com", password: "password", password_confirmation: "password"
 
 about = Category.create name: "Sobre a Baby House"
-pedagogy= Category.create name: "Pedagogia para a vida"
+pedagogy= Category.create name: "Educar para a Vida"
 portal = Category.create name: "Portal das famílias"
 home = Category.create name: "Quem é a Baby House?"
 nursery = Category.create name: "Berçário e Minimaternal"
