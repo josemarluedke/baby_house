@@ -21,8 +21,7 @@ class ApplyForm < MailForm::Base
   def headers
     {
       :subject => "Currículo para trabalhar na Baby House",
-      #:to => "josemarluedke@gmail.com"
-      :to => "gustavo@tridara.net"
+      :to => "curriculos@escolababyhouse.com"
     }
   end
 end
