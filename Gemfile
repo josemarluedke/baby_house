@@ -20,7 +20,7 @@ gem 'thin'
 gem 'jquery-rails', '~> 2.1.4'
 gem 'slim-rails'
 gem 'prettyphoto-rails', '~> 0.2.0'
-gem 'initjs', '~> 0.1.2'
+gem 'initjs', '~> 1.0.0'
 
 # Tools
 gem 'simple_form', '~> 2.0.4'
