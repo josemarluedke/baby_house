@@ -2,7 +2,7 @@
   h1 Trabalhe na Baby House
   .tip
     p 
-      | Etiam porta sem malesuada magna mollis euismod. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.   
+      | Se você deseja fazer parte da nossa equipe, envie seus dados e seu currículo usando o formulário abaixo.
   = simple_form_for @apply, url: apply_index_path, id: "contato_form" do |f|
     .form_apply
       .your_data
@@ -13,7 +13,7 @@
           li = f.input :role, :collection => ["Professora (necessário curso de Pedagogia concluído com ênfase ou aprimoramento em Educação Infantil)", "Assistente", "Professor especializado", "Outros"]
           li.hide.specialist_teacher = f.input :specialist_teacher, as: :text, input_html: { rows: 5, cols: 40 }
 
-          li.hide.role_other = f.input :role_other, as: :text, input_html: { rows: 7, cols: 40 }
+          li.hide.role_other = f.input :role_other, input_html: { rows: 7, cols: 40 }
 
           li = f.input :already_sent, :as => :radio_buttons, :collection => ["Sim", "Não"]
           li.hide.already_sent_year = f.input :already_sent_year
@@ -21,5 +21,6 @@
           li = f.input :already_apply, :as => :radio_buttons, :collection => ["Sim", "Não"]
           li.hide.already_apply_year = f.input :already_apply_year
           li = f.input :file, as: :file
+          li.others = f.input :others, as: :text, input_html: { rows: 7, cols: 40 }
       .submit
         = f.submit value: "Enviar currículo", class: "button"

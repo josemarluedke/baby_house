@@ -10,9 +10,15 @@ class ApplyForm < MailForm::Base
   attribute :already_sent_year
   attribute :already_apply, validate: true
   attribute :already_apply_year
-  attribute :file, attachment: true, validate: :test
+  attribute :file, attachment: true, validate: :validate_file
+  attribute :others
 
-  def test
+  def validate_file
+    unless file.present?
+      self.errors.add(:file, "Anexe o currículo")
+      return false
+    end
+
     unless file.original_filename.match(%r{\.(png|jpg|jpeg|doc|docx|pdf|pps|ppsx)$}i)
       self.errors.add(:file, "Extensão inválida")
     end

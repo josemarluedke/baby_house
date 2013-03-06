@@ -16,7 +16,7 @@ html
       .wrapper
         - if current_page?(root_url)
           = render :partial => "layouts/banner"
-        .content
+        .content[class=controller.action_name.camelize]
           = yield
 
       footer

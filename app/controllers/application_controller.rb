@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
     @about_pages = Page.where(category_id: Category.where(name: "Sobre a Baby House")).order('created_at ASC')
     @pedagogy_pages = Page.where(category_id: Category.where(name: "Educar para a Vida")).order('created_at ASC')
     @portal_pages = Page.where(category_id: Category.where(name: "Portal das famílias")).order('created_at ASC')
+    @visit = Page.where(category_id: Category.where(name: "Visite a Baby House")).first
+    @enroll = Page.where(category_id: Category.where(name: "Matricule seu filho")).first
   end
 
   protected

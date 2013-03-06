@@ -23,6 +23,7 @@ pt-BR:
         already_apply: "Já participou de processo de seleção conosco?"
         already_apply_year: "Ano em que participou do processo de seleção"
         file: "Anexar currículo com foto:"
+        others: "Outras informações"
     request:
       title: "Technical information about the user"
       remote_ip: "IP Address"

@@ -34,7 +34,9 @@
         = link_to("Entre em contato", contato_path, :class => "menu1")
         ul.submenu.contact
           .arrow
-          li = link_to("Contatos Gerais", contato_path)
-          li = link_to("Trabalhe na Baby House", apply_path)
+          li = link_to("Agendar uma visita", page_path(@visit))
+          li = link_to("Solicitar inscrição", page_path(@enroll))
+          li = link_to("Trabalhe conosco", apply_path)
+          li = link_to("Outros", contato_path)
 
   .clear
