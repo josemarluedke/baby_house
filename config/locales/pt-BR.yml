@@ -24,6 +24,11 @@ pt-BR:
         already_apply_year: "Ano em que participou do processo de seleção"
         file: "Anexar currículo com foto:"
         others: "Outras informações"
+      talk_form:
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
+        message: "Mensagem"
     request:
       title: "Technical information about the user"
       remote_ip: "IP Address"

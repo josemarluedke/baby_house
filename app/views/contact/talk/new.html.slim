@@ -1,0 +1,15 @@
+#contact
+  h1 Solicitar palestra ou curso
+
+  = simple_form_for @talk, url: contact_talk_index_path, id: "contato_form" do |f|
+    .form_center
+      .your_data
+        ul
+          li = f.input :name, input_html: { id: "name" }
+          li = f.input :email, input_html: { id: "email" }
+          li = f.input :phone, input_html: { id: "phone" }
+      .your_message
+        = f.input :message, as: :text, input_html: { id: "message", rows: 10, cols: 40 }
+      .submit
+        = f.submit value: "Fazer solicitação", class: "button"
+
