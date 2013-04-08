@@ -1,0 +1,21 @@
+#contact
+  h1 Oferecer produto(s) ou serviço(s)
+  = simple_form_for @offer, url: contact_offer_index_path, id: "contato_form" do |f|
+    .form_center
+      .your_data
+        ul
+          li = f.input :sector, :collection => { "Higiene, limpeza e manutenção" => 1,
+                                                 "Alimentação" => 2,
+                                                 "Administrativo" => 3,
+                                                 "Pedagógico" => 4,
+                                                 "Direção" => 5,
+                                                 "Outros" => 6}
+          li = f.input :name, input_html: { id: "name" }
+          li = f.input :email, input_html: { id: "email" }
+          li = f.input :phone, input_html: { id: "phone" }
+          li = f.input :file, as: :file
+      .your_message
+        = f.input :message, as: :text, input_html: { id: "message", rows: 10, cols: 40 }
+      .submit
+        = f.submit value: "Enviar oferta", class: "button"
+

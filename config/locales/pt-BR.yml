@@ -34,6 +34,13 @@ pt-BR:
         email: "E-mail"
         phone: "Telefone"
         message: "Mensagem"
+      offer_form:
+        sector: "Setor"
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
+        message: "Mensagem"
+        file: "Anexar um arquivo"
     request:
       title: "Technical information about the user"
       remote_ip: "IP Address"

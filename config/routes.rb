@@ -3,6 +3,7 @@ BabyHouse::Application.routes.draw do
   namespace :contact do
     resources :talk, only: [:new, :create]
     resources :informations, only: [:new, :create]
+    resources :offer, only: [:new, :create]
   end
 
   devise_for :admin_users
