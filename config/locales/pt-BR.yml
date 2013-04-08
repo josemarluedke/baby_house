@@ -29,6 +29,11 @@ pt-BR:
         email: "E-mail"
         phone: "Telefone"
         message: "Mensagem"
+      information_form:
+        name: "Nome"
+        email: "E-mail"
+        phone: "Telefone"
+        message: "Mensagem"
     request:
       title: "Technical information about the user"
       remote_ip: "IP Address"

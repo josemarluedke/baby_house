@@ -1,0 +1,20 @@
+#contact
+  h1 Solicitar informações
+  .tip
+    p
+      | Para informações sobre horários e valores, #{ link_to "clique aqui", '/horarios-e-valores'}.
+      br/
+      | Para outras informações, preencha corretamente o formulário abaixo. Retornaremos o contato o mais breve possível!
+  = simple_form_for @information, url: contact_informations_path, id: "contato_form" do |f|
+    .form_center
+      .your_data
+        ul
+          li = f.input :name, input_html: { id: "name" }
+          li = f.input :email, input_html: { id: "email" }
+          li = f.input :phone, input_html: { id: "phone" }
+      .your_message
+        = f.input :message, as: :text, input_html: { id: "message", rows: 10, cols: 40 }
+      .submit
+        = f.submit value: "Fazer solicitação", class: "button"
+
+
