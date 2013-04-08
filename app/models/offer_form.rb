@@ -19,7 +19,7 @@ class OfferForm < MailForm::Base
 
   def headers
     {
-      :subject => "Solicitação de mais informações pelo site Baby House",
+      :subject => "Oferecer produto(s) ou serviço(s) pelo site Baby House - #{sector_text[sector.to_i]}",
       :to => emails[sector.to_i]
     }
   end
@@ -35,6 +35,16 @@ class OfferForm < MailForm::Base
       6 => ["direcao@escolababyhouse.com"]
     }
   end
-end
 
+  def sector_text
+    {
+      1 => "Higiene, limpeza e manutenção",
+      2 => "Alimentação",
+      3 => "Administrativo",
+      4 => "Pedagógico",
+      5 => "Direção",
+      6 => "Outros"
+    }
+  end
+end
 
