@@ -1,5 +1,5 @@
 class ContactForm < MailForm::Base
-  attribute :subject
+  attribute :subject, validate: true
   attribute :name, validate: true
   attribute :email, validate: /\A([\w\.%\+\-]+)@([\w\-]+\.)+([\w]{2,})\z/i
   attribute :phone

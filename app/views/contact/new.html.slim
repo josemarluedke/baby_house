@@ -1,48 +1,14 @@
 #contact
   h1 Entre em contato conosco!
-  .tip
-    p 
-      | Quer entrar em contato com a Baby House? 
-      br
-      | Especifique o assunto e preencha corretamente o formulário abaixo. 
-      br
-      | Retornaremos o contato o mais breve possível!
   
   = simple_form_for @contact, url: contact_index_path, id: "contato_form" do |f|
-    .subject
-      h2 Eu quero...
-      ul
-        li
-          input[type="radio" name="contact_form[subject]" value="mais informações" id="info"] 
-          label[for="info"] Saber mais informações
-        /li
-          input[type="radio" name="contact_form[subject]" value="trabalhar na Baby House" id="work"] 
-          label[for="work"] Trabalhar na Baby House
-        /li
-          /input[type="radio" name="contact_form[subject]" value="visitar Baby House" id="visit"] 
-          /label[for="visit"] Visitar a Baby House
-        /li
-          /input[type="radio" name="contact_form[subject]" value="fazer matrícula" id="register"] 
-          label[for="register"] Fazer matrícula
-        li
-          input[type="radio" name="contact_form[subject]" value="solicitar palestra ou curso" id="courses"] 
-          label[for="courses"] Solicitar palestra ou curso
-        li
-          input[type="radio" name="contact_form[subject]" value="oferecer produtos e serviços" id="services"] 
-          label[for="services"] Oferecer produtos e serviços
-        li
-          input[type="radio" name="contact_form[subject]" value="dar opinião/sugestão" id="opinion"]
-          label[for="opinion"] Dar minha opinião e/ou sugestão
-        li
-          input[type="radio" name="contact_form[subject]" value="outros contatos" id="others"]
-          label[for="others"] Outros contatos
-
-    .right
+    .form_center
       .your_data
         ul
           li = f.input :name, input_html: { id: "name" }
           li = f.input :email, input_html: { id: "email" }
           li = f.input :phone, input_html: { id: "phone" }
+          li = f.input :subject, input_html: { id: "subject" }
       .your_message
         = f.input :message, as: :text, input_html: { id: "message", rows: 10, cols: 40 }
       .submit
