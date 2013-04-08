@@ -20,7 +20,7 @@ class OfferForm < MailForm::Base
   def headers
     {
       :subject => "Solicitação de mais informações pelo site Baby House",
-      :to => emails[sector]
+      :to => emails[sector.to_i]
     }
   end
 
