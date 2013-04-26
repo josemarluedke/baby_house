@@ -14,10 +14,7 @@ class ApplyForm < MailForm::Base
   attribute :others
 
   def validate_file
-    unless file.present?
-      self.errors.add(:file, "Anexe o currículo")
-      return false
-    end
+    return true unless file.present?
 
     unless file.original_filename.match(%r{\.(png|jpg|jpeg|doc|docx|pdf|pps|ppsx)$}i)
       self.errors.add(:file, "Extensão inválida")
