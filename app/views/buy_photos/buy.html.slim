@@ -3,7 +3,7 @@
 
   p
     | Eu, #{current_parent.name}, responsável pela(s) criança(s): 
-    | #{current_parent.students.map(&:name).join(', ')} 
+    | #{current_parent.students.pluck(:name).join(', ')}
   p.text-left
     br/
     | Solicito as seguintes fotos:
