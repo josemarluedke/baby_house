@@ -65,4 +65,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'pry'
   gem 'awesome_print'
+  gem 'simplecov', '~> 0.8.2', :require => false
 end
