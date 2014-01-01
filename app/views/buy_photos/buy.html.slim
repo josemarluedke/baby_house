@@ -26,7 +26,7 @@
 
   p.text-left
     | Total de fotos solicitadas: #{@buy_photos.count}
-    
+
     br/
     | Valor total do pedido: #{number_to_currency (BuyPhoto::PRICE * @buy_photos.count)}
 
@@ -38,13 +38,13 @@
     br/
     | Assitatura
 
-  - unless params[:print]
+  - if params[:print]
+    javascript:
+      window.print()
+  - else
     p
       | Imprimir este formulário, assinar e entregar na secretaria com o valor correspondente.
     p
       = link_to "Continuar comprando", activities_path, class: "btn btn-primary"
       | &nbsp
       = link_to "Finalizar e imprimir", buy_buy_photos_url(print: true), class: "btn btn-primary buyBottom", target: "_blank"
-  - else
-    javascript:
-      window.print()
