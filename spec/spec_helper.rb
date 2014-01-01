@@ -35,4 +35,8 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  config.after(:suite) do
+    FileUtils.rm_rf Dir["#{Rails.root.join('public', 'uploads_test')}"]
+  end
 end
