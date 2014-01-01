@@ -10,8 +10,8 @@ describe Team do
 
   describe "Associations" do
     it { should have_many :attendances }
-    it { should have_many :students }
+    it { should have_many(:students).through(:attendances) }
     it { should have_many :team_activities }
-    it { should have_many :activities }
+    it { should have_many(:activities).through(:team_activities) }
   end
 end

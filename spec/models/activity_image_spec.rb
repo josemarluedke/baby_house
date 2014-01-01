@@ -8,5 +8,6 @@ describe ActivityImage do
 
   describe "Associations" do
     it { should belong_to :activity }
+    it { should have_many(:buy_photos).dependent(:destroy) }
   end
 end

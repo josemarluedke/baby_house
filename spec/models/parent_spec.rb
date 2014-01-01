@@ -72,7 +72,13 @@ describe Parent do
 
   describe "Associations" do
     it { should have_many :parentages }
-    it { should have_many :students }
+    it { should have_many(:buy_photos).dependent(:destroy) }
+    it { should have_many(:students).through(:parentages) }
   end
 
+  describe "#admin?" do
+    it "returns false" do
+      expect(subject.admin?).to be_false
+    end
+  end
 end
