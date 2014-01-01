@@ -38,10 +38,7 @@
     br/
     | Assitatura
 
-  - if params[:print]
-    javascript:
-      window.print()
-  - else
+  - unless params[:print]
     p
       | Imprimir este formulário, assinar e entregar na secretaria com o valor correspondente.
     p
