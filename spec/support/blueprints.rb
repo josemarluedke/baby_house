@@ -37,3 +37,12 @@ Activity.blueprint do
   cover { File.open("#{Rails.root}/spec/fixtures/images/image.jpg") }
 end
 
+BuyPhoto.blueprint do
+  activity_image
+  parent
+end
+
+ActivityImage.blueprint do
+  activity
+  image { File.open(Rails.root.join('spec', 'fixtures', 'images', 'image.jpg')) }
+end

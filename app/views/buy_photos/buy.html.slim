@@ -28,7 +28,7 @@
     | Total de fotos solicitadas: #{@buy_photos.count}
 
     br/
-    | Valor total do pedido: #{number_to_currency (BuyPhoto::PRICE * @buy_photos.count)}
+    | Valor total do pedido: #{number_to_currency @buy_photos.price}
 
   p
     | Porto Alegre, #{l Time.now.to_date, format: :extension}
