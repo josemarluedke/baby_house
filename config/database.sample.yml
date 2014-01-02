@@ -3,8 +3,8 @@ development:
   encoding: unicode
   database: baby_house_development
   pool: 5
-  #username: postgres
-  #password:
+  username: postgres
+  password:
   host: localhost
 
 test:
@@ -12,8 +12,8 @@ test:
   encoding: unicode
   database: baby_house_test
   pool: 5
-  #username: postgres
-  #password:
+  username: postgres
+  password:
   min_messages: WARNING
   host: localhost
 
