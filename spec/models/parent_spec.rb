@@ -77,8 +77,6 @@ describe Parent do
   end
 
   describe "#admin?" do
-    it "returns false" do
-      expect(subject.admin?).to be_false
-    end
+    it { should_not be_admin }
   end
 end
