@@ -3,7 +3,7 @@
 
   p
     | Eu, #{current_parent.name}, responsável pela(s) criança(s): 
-    | #{current_parent.students.map(&:name).join(', ')} 
+    | #{current_parent.students.pluck(:name).join(', ')}
   p.text-left
     br/
     | Solicito as seguintes fotos:
@@ -26,9 +26,9 @@
 
   p.text-left
     | Total de fotos solicitadas: #{@buy_photos.count}
-    
+
     br/
-    | Valor total do pedido: #{number_to_currency (BuyPhoto::PRICE * @buy_photos.count)}
+    | Valor total do pedido: #{number_to_currency @buy_photos.price}
 
   p
     | Porto Alegre, #{l Time.now.to_date, format: :extension}
@@ -45,6 +45,3 @@
       = link_to "Continuar comprando", activities_path, class: "btn btn-primary"
       | &nbsp
       = link_to "Finalizar e imprimir", buy_buy_photos_url(print: true), class: "btn btn-primary buyBottom", target: "_blank"
-  - else
-    javascript:
-      window.print()

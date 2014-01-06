@@ -11,7 +11,7 @@ class Parent < ActiveRecord::Base
   validates :name, presence: true
 
   def admin?
-  	false
+    false
   end
 
   def before_import_save(row, map)

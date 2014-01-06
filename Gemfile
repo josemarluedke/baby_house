@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.16'
 
 # Database
 gem 'pg'
@@ -42,8 +42,9 @@ gem 'rmagick'
 #gem 'carrierwave-postgresql'
 #gem 'postgresql_lo_streamer', github: 'diogob/postgresql_lo_streamer'
 
+gem 'tilt', '~> 1.3.0'
 group :assets do
-  gem 'sass-rails',   '~> 3.2.5'
+  gem 'sass-rails', '~> 3.2.6'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'compass-rails', '~> 1.0.3'
   gem 'bootstrap-sass'
@@ -64,4 +65,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'pry'
   gem 'awesome_print'
+  gem 'simplecov', '~> 0.8.2', :require => false
 end
