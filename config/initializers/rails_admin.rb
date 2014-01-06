@@ -45,7 +45,9 @@ RailsAdmin.config do |config|
     dashboard # mandatory
     # collection actions
     index # mandatory
-    new
+    new do
+      except ['AlbumOrder']
+    end
     export
     history_index
     bulk_delete
@@ -157,6 +159,35 @@ RailsAdmin.config do |config|
       field :password
       field :password_confirmation
       field :post_photos
+    end
+  end
+
+  def link_to_album_zip
+    %{<a href="http://www.escolababyhouse.com.br/zip/#{self.filename}">Clique Aqui</a>}.html_safe if self.filename.present?
+  end
+
+  def ready_for_export
+    self.finished_at.nil? ? 'Não' : 'Sim'
+  end
+
+  config.model AlbumOrder do
+    list do
+      field :id
+      field :ready_for_export do
+        label 'Pedido finalizado?'
+      end
+      field :exported
+      field :parent
+    end
+    show do
+      field :parent
+      field :buy_photos
+      field :link_to_album_zip do
+        label "Download"
+      end
+    end
+    edit do
+      field :exported
     end
   end
 end

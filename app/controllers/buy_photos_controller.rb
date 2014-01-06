@@ -10,14 +10,15 @@ class BuyPhotosController < ApplicationController
   end
 
   def create
-    item = begin_of_association_chain.buy_photos.where(activity_image_id: params[:activity_image_id])
-    if item.any?
-      item.first.delete
-      render json: "Deleted"
-      return
+    album_order = begin_of_association_chain.album_orders.unscoped.find_or_create_by_finished_at(nil)
+    item = begin_of_association_chain.buy_photos.where(activity_image_id: params[:activity_image_id], album_order_id: album_order.id)
+    if item = item.first
+      item.delete
+      return render json: "Deleted"
     end
 
     @buy_photo = begin_of_association_chain.buy_photos.new(activity_image_id: params[:activity_image_id])
+    @buy_photo.album_order = album_order
     if @buy_photo.save
       render json: @buy_photo
     else

@@ -50,6 +50,9 @@ pt-BR:
       activity: "Atividades"
       activity_image: "Fotos das atividades"
       admin_user: "Usuários administradores"
+      album_order:
+        one: "Pedido"
+        other: "Pedidos"
       category: "Categorias"
       image: "Imagens"
       page: "Páginas"
@@ -67,6 +70,11 @@ pt-BR:
       activity_image:
         activity: "Atividade"
         image: "Foto"
+      album_order:
+        exported: "Exportado"
+        filename: "Arquivo"
+        finished_at: "Pedido em"
+        parent: "Pai"
       banner:
         title: "Título"
         description: "Descrição"
