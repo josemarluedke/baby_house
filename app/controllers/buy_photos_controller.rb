@@ -27,7 +27,7 @@ class BuyPhotosController < ApplicationController
 
   def buy
     if params[:print]
-      current_album.purchase
+      AlbumOrderWorker.perform_async(current_album.id)
       render 'buy_photos/buy', layout: 'print'
     end
   end
