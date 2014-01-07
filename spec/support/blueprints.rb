@@ -39,6 +39,7 @@ end
 
 BuyPhoto.blueprint do
   activity_image
+  album_order
   parent
 end
 

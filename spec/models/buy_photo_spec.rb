@@ -2,9 +2,10 @@ require 'spec_helper'
 
 describe BuyPhoto do
   describe "Validations" do
-    it { should validate_uniqueness_of(:activity_image_id).scoped_to(:parent_id) }
+    it { should validate_uniqueness_of(:activity_image_id).scoped_to(:parent_id, :album_order_id) }
     it { should validate_presence_of(:activity_image) }
     it { should validate_presence_of(:parent) }
+    it { should validate_presence_of(:album_order) }
   end
 
   describe "Relations" do

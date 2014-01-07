@@ -16,7 +16,7 @@ h1.title
     - unless @activity.activity_images.any?
       p Nenhuma foto ainda.
 
-    = form_for :buy_photos, :url => buy_photos_path(format: :json) , :remote => true do |f| 
+    = form_for :buy_photos, :url => buy_photos_path(format: :json) , :remote => true do |f|
       = hidden_field_tag "activity_image_id", "", class: "activity_image_id"
       - for image in @activity.activity_images
         .image
@@ -24,7 +24,7 @@ h1.title
             - image_tag image.image.url, size: "100x56", alt: ""
           label
             | Comprar: 
-            = check_box_tag "photos[activity_image_id]", image.id, BuyPhoto.where(activity_image_id: image.id, parent_id: current_parent.id).any?, class: "check_photo", :"data-id" => image.id
+            = check_box_tag "photos[activity_image_id]", image.id, current_parent.album_orders.where(finished_at: nil).joins(:buy_photos).where("buy_photos.activity_image_id = ?", image.id).exists?, class: "check_photo", :"data-id" => image.id
 
   section
     br/
