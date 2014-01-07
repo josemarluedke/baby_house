@@ -3,6 +3,7 @@ require 'zip'
 class AlbumOrder < ActiveRecord::Base
   belongs_to :parent
   has_many :buy_photos
+  has_many :activity_images, :through => :buy_photos
   attr_accessible :exported
 
   validates :parent, presence: true

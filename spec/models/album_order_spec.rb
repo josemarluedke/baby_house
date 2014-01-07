@@ -7,6 +7,8 @@ describe AlbumOrder do
 
   describe "Relations" do
     it { should belong_to(:parent) }
+    it { should have_many(:buy_photos) }
+    it { should have_many(:activity_images).through(:buy_photos) }
   end
 
   describe "#purchase" do

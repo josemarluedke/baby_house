@@ -181,7 +181,8 @@ RailsAdmin.config do |config|
     end
     show do
       field :parent
-      field :buy_photos
+      field :activity_images
+      field :exported
       field :link_to_album_zip do
         label "Download"
       end
