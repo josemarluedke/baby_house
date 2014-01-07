@@ -163,7 +163,7 @@ RailsAdmin.config do |config|
   end
 
   def link_to_album_zip
-    %{<a href="http://www.escolababyhouse.com.br/zip/#{self.filename}">Clique Aqui</a>}.html_safe if self.filename.present?
+    %{<a href="#{self.download_url}">Clique Aqui</a>}.html_safe if self.filename.present?
   end
 
   def ready_for_export
