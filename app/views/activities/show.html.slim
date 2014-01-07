@@ -20,8 +20,8 @@ h1.title
       = hidden_field_tag "activity_image_id", "", class: "activity_image_id"
       - for image in @activity.activity_images
         .image
-          = link_to image.image.url, rel: "prettyPhoto[pp_gal]", title: "" do
-            - image_tag image.image.url, size: "100x56", alt: ""
+          = link_to image.image.url(:preview), rel: "prettyPhoto[pp_gal]", title: "" do
+            - image_tag image.image.url(:preview), size: "100x56", alt: ""
           label
             | Comprar: 
             = check_box_tag "photos[activity_image_id]", image.id, current_parent.album_orders.where(finished_at: nil).joins(:buy_photos).where("buy_photos.activity_image_id = ?", image.id).exists?, class: "check_photo", :"data-id" => image.id
