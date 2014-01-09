@@ -9,7 +9,7 @@ h1.title Atividades
         = image_tag activity.cover.url
       .name = link_to activity.name, activity
       .date = l(activity.date) if activity.date.present?
-      .description = truncate(strip_tags(activity.description), length: 70)
+      .description = truncate(strip_tags(activity.description), length: 70).html_safe
 
 section.buy
   = link_to "Visualizar todas fotos selecionadas", "#viewSelected", class: "btn btn-primary viewSelected", :"data-toggle" => "modal", :"data-url" => buy_photos_url
