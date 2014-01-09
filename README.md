@@ -52,6 +52,14 @@ export sendgrid_username=your_sendgrid_username
 export sendgrid_password=your_sendgrid_password
 	```
 
+If you want to upload files to Amazon S3
+```sh
+export UPLOAD_TO_S3=true
+export AWS_ACCESS_KEY=your_access_key
+export AWS_SECRET_ACCESS_KEY=your_secret_key
+export FOG_DIRECTORY=your_s3_bucket_name
+```
+
 [rvm]: https://rvm.io/
 [bundler]: http://gembundler.com/
 [Gemspec]: http://docs.rubygems.org/read/chapter/20

@@ -14,7 +14,7 @@ class AlbumOrder < ActiveRecord::Base
     return false unless buy_photos.any? && finished_at.nil?
     self.finished_at = DateTime.now
     create_zip
-    upload_to_s3 if Rails.env.production?
+    upload_to_s3 if ENV['UPLOAD_TO_S3']
     save
   end
 
@@ -49,6 +49,7 @@ class AlbumOrder < ActiveRecord::Base
       map(&:activity_image).
       map{ |activity_image| activity_image.image.file.file }
 
+    self.download_url = "http://www.escolababyhouse.com.br/zip/#{filename}"
     Zip::File.open(ZIP_LOCATION.join("#{folder_name}.zip").to_s, Zip::File::CREATE) do |zipfile|
       images.each do |file|
         zipfile.add("#{folder_name}/#{file.split('/').last}", file)
