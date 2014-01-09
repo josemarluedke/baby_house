@@ -16,7 +16,7 @@
           th Nome do arquivo
           th Id da foto
       tbody
-        - for item in @buy_photos
+        - for item in collection
           - i ||= 0; i += 1
           tr
             td = i
@@ -25,10 +25,12 @@
             td = item.activity_image.id
 
   p.text-left
-    | Total de fotos solicitadas: #{@buy_photos.count}
+    | Total de fotos solicitadas: #{collection.count}
 
     br/
-    | Valor total do pedido: #{number_to_currency @buy_photos.price}
+    | Valor total do pedido: #{number_to_currency collection.price}
+    br/
+    | Número de referência do pedido: ##{@current_album.id}
 
   p
     | Porto Alegre, #{l Time.now.to_date, format: :extension}

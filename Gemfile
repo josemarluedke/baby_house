@@ -31,6 +31,9 @@ gem 'tinymce-rails', '~> 3.5.8'
 gem 'tinymce-rails-imageupload', '~> 3.5.6.3'
 gem 'sendgrid'
 gem 'feedzirra'
+gem 'rubyzip', '~> 1.1.0'
+gem 'sidekiq', '~> 2.17.2'
+gem 'fog', '~> 1.19.0'
 
 # Administration
 gem 'rails_admin', '~> 0.2.0'

@@ -10,10 +10,6 @@ class ActivityImageUploader < CarrierWave::Uploader::Base
   # include Sprockets::Helpers::RailsHelper
   # include Sprockets::Helpers::IsolatedHelper
 
-  # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
-
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
@@ -22,7 +18,9 @@ class ActivityImageUploader < CarrierWave::Uploader::Base
 
   # Process files as they are uploaded:
   # process :scale => [200, 300]
-  process :resize_to_fill => [400, 225]
+  version :preview do
+    process :resize_to_fill => [400, 225]
+  end
   process :convert => 'jpg'
 
   def extension_white_list

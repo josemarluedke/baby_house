@@ -74,6 +74,7 @@ describe Parent do
     it { should have_many :parentages }
     it { should have_many(:buy_photos).dependent(:destroy) }
     it { should have_many(:students).through(:parentages) }
+    it { should have_many(:album_orders).dependent(:destroy) }
   end
 
   describe "#admin?" do

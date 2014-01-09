@@ -39,10 +39,15 @@ end
 
 BuyPhoto.blueprint do
   activity_image
+  album_order
   parent
 end
 
 ActivityImage.blueprint do
-  activity
+  activity { Activity.make! }
   image { File.open(Rails.root.join('spec', 'fixtures', 'images', 'image.jpg')) }
+end
+
+AlbumOrder.blueprint do
+  parent
 end
